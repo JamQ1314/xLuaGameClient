@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 041b532d521e55e4ea8c686f2d075895
+timeCreated: 1554287045
+licenseType: Pro
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: lua/framework/net/protobuf/protobuf.lua
+  assetBundleVariant: 

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 50d022d98174a6c41a75e81aae47aaf4
+timeCreated: 1554287046
+licenseType: Pro
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: lua/framework/net/protobuf/wire_format.lua
+  assetBundleVariant: 

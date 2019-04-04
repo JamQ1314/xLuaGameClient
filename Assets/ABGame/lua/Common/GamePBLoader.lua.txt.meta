@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 85c867a14ce53a247acb1c3d6f9113f4
+timeCreated: 1554287046
+licenseType: Pro
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: lua/common/gamepbloader.lua
+  assetBundleVariant: 

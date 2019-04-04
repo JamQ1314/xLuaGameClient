@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 7b11caa78833db548b80b039ebf2e464
+timeCreated: 1554287046
+licenseType: Pro
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: lua/framework/net/protobuf/encoder.lua
+  assetBundleVariant: 

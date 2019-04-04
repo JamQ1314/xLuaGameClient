@@ -1,0 +1,3 @@
+print("this is lua TestMain")
+
+require "acc_pb"

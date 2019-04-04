@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 019550fcaf39b3f4bbe08fb10b9b3a5b
+timeCreated: 1554287045
+licenseType: Pro
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: lua/common/gamecache.lua
+  assetBundleVariant: 

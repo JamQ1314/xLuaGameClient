@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 394e52d8572e910498a2b9ddacae4b14
+timeCreated: 1554359103
+licenseType: Pro
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: lua/ui/lobbyview.lua
+  assetBundleVariant: 

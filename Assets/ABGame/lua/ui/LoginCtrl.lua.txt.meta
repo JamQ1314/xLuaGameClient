@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 8d304d3ef332bd14891506b819adc8a8
+timeCreated: 1554359103
+licenseType: Pro
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: lua/ui/loginctrl.lua
+  assetBundleVariant: 

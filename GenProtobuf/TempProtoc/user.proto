@@ -1,0 +1,7 @@
+message User {
+	required int32 id = 1;
+	required string name = 2;
+	required int32 sex = 3;
+	required int32 gold = 4;
+}
+

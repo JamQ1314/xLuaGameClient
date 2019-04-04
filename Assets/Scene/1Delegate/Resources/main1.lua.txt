@@ -1,0 +1,4 @@
+print("main1")
+
+require "Mydel"
+Mydel.Init()

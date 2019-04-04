@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: d404b08f56739d147a7bc2733b7461df
+timeCreated: 1554287046
+licenseType: Pro
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: lua/framework/net/protobuf/descriptor.lua
+  assetBundleVariant: 

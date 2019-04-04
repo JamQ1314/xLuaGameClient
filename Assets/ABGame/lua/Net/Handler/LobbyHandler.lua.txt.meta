@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 0fe7cb1f770b40f438455315f863e787
+timeCreated: 1554359103
+licenseType: Pro
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: lua/net/handler/lobbyhandler.lua
+  assetBundleVariant: 

@@ -1,0 +1,24 @@
+Mydel = {}
+
+local this = Mydel
+
+
+function Mydel.Init()
+	CS.Center.Ins:RegisterAction1(1,Mydel.f1)
+	CS.Center.Ins:RegisterAction2(1,Mydel.f2)
+	CS.Center.Ins:RegisterAction3(1,Mydel.f3)
+end
+
+function Mydel.f1()
+	print("this is f1")
+end
+
+function Mydel.f2(str)
+	print("this is f2 " )
+end
+
+function Mydel.f3(id,bytes)
+	print("this is f3")
+	
+	print(id.."     "..bytes)
+end

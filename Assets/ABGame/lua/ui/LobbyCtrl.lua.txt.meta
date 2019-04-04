@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: f45d92e90b57ce94ca3adb4e82b5e7a7
+timeCreated: 1554359103
+licenseType: Pro
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: lua/ui/lobbyctrl.lua
+  assetBundleVariant: 
