@@ -1,9 +1,0 @@
-fileFormatVersion: 2
-guid: 27c35e28db604ca4488e633ac2d4c153
-timeCreated: 1554287045
-licenseType: Pro
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: lua/framework/net/protobuf/type_checkers.lua
-  assetBundleVariant: 

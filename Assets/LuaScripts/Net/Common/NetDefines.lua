@@ -1,6 +1,6 @@
 Main_ID = {
 	Lobby = 1,
-	Game =2,
+	NiuNiu = 2,
 	}
 
 Lobby_ID = {
@@ -10,5 +10,20 @@ Lobby_ID = {
 	VisitorLogin = 4,
 	-- 回调 100 起
 	LoginSuccess = 101
+	
+	}
+NiuNiu_ID = {
+	Create = 1,
+	Jion =2,
+	Leave =3,
+	Ready =4,
+	Start = 5,
+	TimeCount = 6,
+	
+	
+	CreateSuccess = 101,
+	JionSuccess = 102,
+	JionFailure = 103,
+	
 	
 	}

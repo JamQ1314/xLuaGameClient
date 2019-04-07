@@ -12,10 +12,9 @@ public class LuaTool : Editor
     static void Del()
     {
         if (!Directory.Exists(dstPath))
-            Directory.CreateDirectory(dstPath);
-        else
-            ClearDir(dstPath);
-
+            return;
+        ClearDir(dstPath);
+        Directory.Delete(dstPath);
         AssetDatabase.Refresh();
     }
 

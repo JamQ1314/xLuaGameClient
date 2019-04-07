@@ -1,9 +1,0 @@
-fileFormatVersion: 2
-guid: f30e19c0a89271146a53b8611626e401
-timeCreated: 1554287046
-licenseType: Pro
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: lua/framework/net/protobuf/text_format.lua
-  assetBundleVariant: 

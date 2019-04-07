@@ -1,9 +1,0 @@
-fileFormatVersion: 2
-guid: 663f1fddfa410ce429ff2f671d6e9400
-timeCreated: 1554287046
-licenseType: Pro
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: lua/framework/net/protobuf/containers.lua
-  assetBundleVariant: 

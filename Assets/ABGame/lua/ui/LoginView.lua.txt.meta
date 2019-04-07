@@ -1,9 +1,0 @@
-fileFormatVersion: 2
-guid: 41fe37f6a430d8a46ac3aca3bfd1df3e
-timeCreated: 1554287046
-licenseType: Pro
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: lua/ui/loginview.lua
-  assetBundleVariant: 

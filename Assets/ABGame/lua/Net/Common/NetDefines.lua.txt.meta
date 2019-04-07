@@ -1,9 +1,0 @@
-fileFormatVersion: 2
-guid: 8dee4acc8779e7f43a306803917966d9
-timeCreated: 1554287046
-licenseType: Pro
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: lua/net/common/netdefines.lua
-  assetBundleVariant: 

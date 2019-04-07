@@ -1,9 +1,0 @@
-fileFormatVersion: 2
-guid: 453fd8ed22cf0f64b97d57e83f429241
-timeCreated: 1554287046
-licenseType: Pro
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: lua/net/protobuf/user_pb.lua
-  assetBundleVariant: 

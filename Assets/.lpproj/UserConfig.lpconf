@@ -1,0 +1,142 @@
+<GlobalConfig CodeFontSize = "22"/>
+<BreakpointList/>
+<WatchList/>
+<ProjectUI>
+  <TreeState BaseX = "0" BaseY = "0" AlternativeItem = "LuaFolders#Assets#LuaScripts#ui#LoginView.lua">
+    <SelectedList>
+      <Selected Path = "LuaFolders#Assets#LuaScripts#ui#LoginCtrl.lua"/>
+    </SelectedList>
+    <ExpandedList>
+      <Expanded Path = "LuaFolders"/>
+      <Expanded Path = "LuaFolders#Assets"/>
+      <Expanded Path = "LuaFolders#Assets#LuaScripts"/>
+      <Expanded Path = "LuaFolders#Assets#LuaScripts#Common"/>
+      <Expanded Path = "LuaFolders#Assets#LuaScripts#Net"/>
+      <Expanded Path = "LuaFolders#Assets#LuaScripts#Net#Common"/>
+      <Expanded Path = "LuaFolders#Assets#LuaScripts#Net#Handler"/>
+      <Expanded Path = "LuaFolders#Assets#LuaScripts#ui"/>
+    </ExpandedList>
+  </TreeState>
+</ProjectUI>
+<FindAnReplaceUI
+  Pattern = ""
+  MatchCase = "false"
+  MatchWholeWord = "false"
+  Target = ""
+  Replace = ""/>
+<MainWindow
+  X = "43"
+  Y = "4"
+  Width = "1280"
+  Height = "720"
+  Maximized = "true"
+  LastCodeFilename = "E:/Projects/unity/Game/Assets/LuaScripts/Net/Common/NetDefines.lua">
+  <DockingControl>
+    <DockingNode DockingDirection = "Horizontal">
+      <DockingNode DockingDirection = "None">
+        <DockingBlock Width = "354" Height = "611" DocumentStyle = "false">
+          <DockingCard
+            Text = "Project"
+            Tag = ""
+            ActivePage = "true"
+            ActivateTime = "0"/>
+          <DockingCard
+            Text = "Outline"
+            Tag = ""
+            ActivePage = "false"
+            ActivateTime = "0"/>
+        </DockingBlock>
+      </DockingNode>
+      <DockingNode DockingDirection = "Vertical">
+        <DockingNode DockingDirection = "None">
+          <DockingBlock Width = "993" Height = "455" DocumentStyle = "true">
+            <DockingCard
+              Text = "LobbyCtrl.lua"
+              Tag = "E:/Projects/unity/Game/Assets/LuaScripts/ui/LobbyCtrl.lua"
+              ActivePage = "false"
+              ActivateTime = "137813394"
+              CaretLineIndex = "24"
+              CaretCodeCharIndex = "1"
+              BaseX = "0"
+              BaseY = "-198"/>
+            <DockingCard
+              Text = "LobbyView.lua"
+              Tag = "E:/Projects/unity/Game/Assets/LuaScripts/ui/LobbyView.lua"
+              ActivePage = "false"
+              ActivateTime = "137582634"
+              CaretLineIndex = "0"
+              CaretCodeCharIndex = "0"
+              BaseX = "0"
+              BaseY = "-594"/>
+            <DockingCard
+              Text = "NetDefines.lua"
+              Tag = "E:/Projects/unity/Game/Assets/LuaScripts/Net/Common/NetDefines.lua"
+              ActivePage = "true"
+              ActivateTime = "221961122"
+              CaretLineIndex = "26"
+              CaretCodeCharIndex = "1"
+              BaseX = "0"
+              BaseY = "-242"/>
+            <DockingCard
+              Text = "NiuNiuHandler.lua"
+              Tag = "E:/Projects/unity/Game/Assets/LuaScripts/Net/Handler/NiuNiuHandler.lua"
+              ActivePage = "false"
+              ActivateTime = "137255866"
+              CaretLineIndex = "8"
+              CaretCodeCharIndex = "1"
+              BaseX = "0"
+              BaseY = "0"/>
+            <DockingCard
+              Text = "LoginCtrl.lua"
+              Tag = "E:/Projects/unity/Game/Assets/LuaScripts/ui/LoginCtrl.lua"
+              ActivePage = "false"
+              ActivateTime = "137815080"
+              CaretLineIndex = "30"
+              CaretCodeCharIndex = "19"
+              BaseX = "0"
+              BaseY = "-462"/>
+          </DockingBlock>
+        </DockingNode>
+        <DockingNode DockingDirection = "None">
+          <DockingBlock Width = "993" Height = "149" DocumentStyle = "false">
+            <DockingCard
+              Text = "Output"
+              Tag = ""
+              ActivePage = "true"
+              ActivateTime = "0"/>
+            <DockingCard
+              Text = "Call Stack"
+              Tag = ""
+              ActivePage = "false"
+              ActivateTime = "0"/>
+            <DockingCard
+              Text = "Locals"
+              Tag = ""
+              ActivePage = "false"
+              ActivateTime = "0"/>
+            <DockingCard
+              Text = "Globals"
+              Tag = ""
+              ActivePage = "false"
+              ActivateTime = "0"/>
+            <DockingCard
+              Text = "Watches"
+              Tag = ""
+              ActivePage = "false"
+              ActivateTime = "0"/>
+            <DockingCard
+              Text = "Autos"
+              Tag = ""
+              ActivePage = "false"
+              ActivateTime = "0"/>
+            <DockingCard
+              Text = "Breakpoints"
+              Tag = ""
+              ActivePage = "false"
+              ActivateTime = "0"/>
+          </DockingBlock>
+        </DockingNode>
+      </DockingNode>
+    </DockingNode>
+  </DockingControl>
+</MainWindow>

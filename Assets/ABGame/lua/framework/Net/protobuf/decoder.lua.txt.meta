@@ -1,9 +1,0 @@
-fileFormatVersion: 2
-guid: bd49fcff775650d4f922e162746035e4
-timeCreated: 1554287046
-licenseType: Pro
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: lua/framework/net/protobuf/decoder.lua
-  assetBundleVariant: 

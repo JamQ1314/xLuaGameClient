@@ -8,8 +8,10 @@ function this.Start()
 	require "Net.Common.NetDefines"
 	
 	
-	--this.OpenLobby()
-	this.OpenLogin()
+	this.OpenLobby()
+	--this.OpenLogin()
+	
+	
 end
 
 function this.OpenLogin()
@@ -22,7 +24,7 @@ function this.OpenLobby()
 	local userinfo = userpb.User()
 	userinfo.name = "你好！"
 	userinfo.id = 99
-	userinfo.gold = 1000
+	userinfo.gold = 9999
 	userinfo.sex = 0
 	GameCache.userinfo = userinfo
 	

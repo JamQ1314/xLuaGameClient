@@ -18,7 +18,7 @@ public class NSocket
 
     private int nRecvSize;//已接接收数据长度
 
-    private int nHeadSize;
+    //private int nHeadSize;
 
 
 
@@ -35,7 +35,7 @@ public class NSocket
 
         nRecvSize = 0;
 
-        nHeadSize = Marshal.SizeOf(typeof(TCP_Head));
+        //nHeadSize = Marshal.SizeOf(typeof(TCP_Head));
         
     }
 

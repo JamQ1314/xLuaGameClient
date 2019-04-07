@@ -1,9 +1,0 @@
-fileFormatVersion: 2
-guid: cc4dac491a09c6046b6bf903c952cf0a
-timeCreated: 1554287046
-licenseType: Pro
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: lua/unittest/protobuftest.lua
-  assetBundleVariant: 

@@ -1,9 +1,0 @@
-fileFormatVersion: 2
-guid: 31e78cac414e78849a7509b73b912df6
-timeCreated: 1554287045
-licenseType: Pro
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: lua/net/protobuf/person_pb.lua
-  assetBundleVariant: 

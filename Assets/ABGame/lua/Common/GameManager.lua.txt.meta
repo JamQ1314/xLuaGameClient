@@ -1,9 +1,0 @@
-fileFormatVersion: 2
-guid: 6518e4a763e014845a5c8f08db2a8dca
-timeCreated: 1554287046
-licenseType: Pro
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: lua/common/gamemanager.lua
-  assetBundleVariant: 
