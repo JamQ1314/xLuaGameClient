@@ -24,6 +24,6 @@ NiuNiu_ID = {
 	CreateSuccess = 101,
 	JionSuccess = 102,
 	JionFailure = 103,
-	
-	
+	PlayerJion = 104,
+	LeaveSuccess = 105
 	}

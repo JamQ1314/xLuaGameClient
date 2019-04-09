@@ -8,7 +8,7 @@ end
 function this.HandleMsg(sid,bytes)
 
 	if sid==Lobby_ID.LoginSuccess then
-		LobbyHandler.DoLoginSuccess(bytes)
+		this.DoLoginSuccess(bytes)
 	end
 end
 

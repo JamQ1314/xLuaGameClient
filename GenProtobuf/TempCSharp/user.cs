@@ -48,4 +48,45 @@ namespace user
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"GamePlayer")]
+  public partial class GamePlayer : global::ProtoBuf.IExtensible
+  {
+    public GamePlayer() {}
+    
+    private int _seatid;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"seatid", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int seatid
+    {
+      get { return _seatid; }
+      set { _seatid = value; }
+    }
+    private User _user;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"user", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public User user
+    {
+      get { return _user; }
+      set { _user = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"GameSeatedUPlayers")]
+  public partial class GameSeatedUPlayers : global::ProtoBuf.IExtensible
+  {
+    public GameSeatedUPlayers() {}
+    
+    private readonly global::System.Collections.Generic.List<GamePlayer> _players = new global::System.Collections.Generic.List<GamePlayer>();
+    [global::ProtoBuf.ProtoMember(1, Name=@"players", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public global::System.Collections.Generic.List<GamePlayer> players
+    {
+      get { return _players; }
+    }
+  
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
 }

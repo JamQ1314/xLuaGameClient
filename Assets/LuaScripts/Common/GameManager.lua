@@ -6,12 +6,11 @@ function this.Start()
 	require "Common.GamePBLoader"
 	require "Common.GameCache"
 	require "Net.Common.NetDefines"
+
 	
-	
-	this.OpenLobby()
-	--this.OpenLogin()
-	
-	
+	--this.OpenLobby()
+	this.OpenLogin()
+
 end
 
 function this.OpenLogin()
@@ -21,6 +20,8 @@ function this.OpenLogin()
 end
 
 function this.OpenLobby()
+	CS.GApp.NetMgr:Connect(0,"127.0.0.1",5555)
+	
 	local userinfo = userpb.User()
 	userinfo.name = "你好！"
 	userinfo.id = 99

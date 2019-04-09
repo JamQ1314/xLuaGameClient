@@ -1,5 +1,0 @@
-message Account {
-	required string acc = 1;
-	required string pwd = 2;
-}
-

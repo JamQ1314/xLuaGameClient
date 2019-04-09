@@ -22,7 +22,8 @@ public class UIManager : ManagerBase
     /// <param name="hashtable"></param>
     public void Open(string uiName,Action onCreate = null)
     {
-        GameObject ui = GetGameObject(uiName);
+        string sName = uiName.Substring(uiName.LastIndexOf(".") + 1) +"(Clone)";
+        GameObject ui = GetGameObject(sName);
         if (ui == null)
         {
             ui = GApp.AssetLoaderMgr.LoadAsset(uiName);
@@ -30,7 +31,9 @@ public class UIManager : ManagerBase
                 onCreate();
         }
         ui.GetComponent<LuaViewBehaviour>().Open();
-        dictOpenedUIs.Add(uiName, ui);
+
+        if(!dictOpenedUIs.ContainsKey(ui.name))
+            dictOpenedUIs.Add(ui.name, ui);
     }
 
     public void Test()
@@ -48,7 +51,6 @@ public class UIManager : ManagerBase
         if (ui == null) return;
         ui.GetComponent<LuaViewBehaviour>().Close();
         dictOpenedUIs.Remove(name);
-
     }
     /// <summary>
     /// 关闭所有UI

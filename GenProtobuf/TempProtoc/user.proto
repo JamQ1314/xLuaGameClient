@@ -5,3 +5,11 @@ message User {
 	required int32 gold = 4;
 }
 
+message GamePlayer{
+	required int32 seatid = 1;
+	required User user = 2;
+}
+
+message GameSeatedUPlayers{
+	repeated GamePlayer players = 1;
+}

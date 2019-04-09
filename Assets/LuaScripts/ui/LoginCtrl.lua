@@ -14,21 +14,19 @@ end
 
 function LoginCtrl.OnCreate()
 	--创建UI后回调
-	CS.GApp.UIMgr:GetGameObject("wxloginbtn"):GetComponent("UnityEngine.UI.Button").onClick:AddListener(LoginCtrl.wxlogin)
-	
-	--if CS.GApp.Ins:GetMode() == 0 then
-	--LoginView:AccLoginPanel()
-	--CS.GApp.UIMgr:GetGameObject("accloginbtn"):GetComponent("UnityEngine.UI.Button").onClick:AddListener(LoginCtrl.accLogin)
-	--CS.GApp.UIMgr:GetGameObject("accregisterbtn"):GetComponent("UnityEngine.UI.Button").onClick:AddListener(LoginCtrl.accRegister)
-	--end
+	--CS.GApp.UIMgr:GetGameObject("wxloginbtn"):GetComponent("UnityEngine.UI.Button").onClick:AddListener(LoginCtrl.wxlogin)
+	CS.UIEventListener.Get(LoginView.transform:Find("bg/wxloginbtn")).onClick = LoginCtrl.wxlogin
 	--连接服务器
 	LoginCtrl.netConn()
 end
 
-function LoginCtrl.wxlogin()
+function LoginCtrl.wxlogin(go)
 	--暂时使用游客登陆
 	vid = CS.PlayerPrefsSaveValue.GetInt("visitorid")
-	CS.GApp.NetMgr:SendInt(0,Main_ID.Lobby,Lobby_ID.VisitorLogin,vid)
+	local simpleint = simplepb.SimpleInt()
+	simpleint.simple = vid
+	local bytes = simpleint:SerializeToString()
+	CS.GApp.NetMgr:Send(0,Main_ID.Lobby,Lobby_ID.VisitorLogin,bytes)
 end
 
 

@@ -1,0 +1,7 @@
+message SimpleInt{
+	required int32 simple = 1;
+}
+
+message SimpleString{
+	required string simple = 1;
+}

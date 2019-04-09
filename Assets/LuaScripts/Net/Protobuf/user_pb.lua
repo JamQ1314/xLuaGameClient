@@ -7,6 +7,11 @@ _M.USER_ID_FIELD = protobuf.FieldDescriptor();
 _M.USER_NAME_FIELD = protobuf.FieldDescriptor();
 _M.USER_SEX_FIELD = protobuf.FieldDescriptor();
 _M.USER_GOLD_FIELD = protobuf.FieldDescriptor();
+_M.GAMEPLAYER = protobuf.Descriptor();
+_M.GAMEPLAYER_SEATID_FIELD = protobuf.FieldDescriptor();
+_M.GAMEPLAYER_USER_FIELD = protobuf.FieldDescriptor();
+_M.GAMESEATEDUPLAYERS = protobuf.Descriptor();
+_M.GAMESEATEDUPLAYERS_PLAYERS_FIELD = protobuf.FieldDescriptor();
 
 _M.USER_ID_FIELD.name = "id"
 _M.USER_ID_FIELD.full_name = ".User.id"
@@ -55,7 +60,55 @@ _M.USER.enum_types = {}
 _M.USER.fields = {_M.USER_ID_FIELD, _M.USER_NAME_FIELD, _M.USER_SEX_FIELD, _M.USER_GOLD_FIELD}
 _M.USER.is_extendable = false
 _M.USER.extensions = {}
+_M.GAMEPLAYER_SEATID_FIELD.name = "seatid"
+_M.GAMEPLAYER_SEATID_FIELD.full_name = ".GamePlayer.seatid"
+_M.GAMEPLAYER_SEATID_FIELD.number = 1
+_M.GAMEPLAYER_SEATID_FIELD.index = 0
+_M.GAMEPLAYER_SEATID_FIELD.label = 2
+_M.GAMEPLAYER_SEATID_FIELD.has_default_value = false
+_M.GAMEPLAYER_SEATID_FIELD.default_value = 0
+_M.GAMEPLAYER_SEATID_FIELD.type = 5
+_M.GAMEPLAYER_SEATID_FIELD.cpp_type = 1
 
+_M.GAMEPLAYER_USER_FIELD.name = "user"
+_M.GAMEPLAYER_USER_FIELD.full_name = ".GamePlayer.user"
+_M.GAMEPLAYER_USER_FIELD.number = 2
+_M.GAMEPLAYER_USER_FIELD.index = 1
+_M.GAMEPLAYER_USER_FIELD.label = 2
+_M.GAMEPLAYER_USER_FIELD.has_default_value = false
+_M.GAMEPLAYER_USER_FIELD.default_value = nil
+_M.GAMEPLAYER_USER_FIELD.message_type = _M.USER
+_M.GAMEPLAYER_USER_FIELD.type = 11
+_M.GAMEPLAYER_USER_FIELD.cpp_type = 10
+
+_M.GAMEPLAYER.name = "GamePlayer"
+_M.GAMEPLAYER.full_name = ".GamePlayer"
+_M.GAMEPLAYER.nested_types = {}
+_M.GAMEPLAYER.enum_types = {}
+_M.GAMEPLAYER.fields = {_M.GAMEPLAYER_SEATID_FIELD, _M.GAMEPLAYER_USER_FIELD}
+_M.GAMEPLAYER.is_extendable = false
+_M.GAMEPLAYER.extensions = {}
+_M.GAMESEATEDUPLAYERS_PLAYERS_FIELD.name = "players"
+_M.GAMESEATEDUPLAYERS_PLAYERS_FIELD.full_name = ".GameSeatedUPlayers.players"
+_M.GAMESEATEDUPLAYERS_PLAYERS_FIELD.number = 1
+_M.GAMESEATEDUPLAYERS_PLAYERS_FIELD.index = 0
+_M.GAMESEATEDUPLAYERS_PLAYERS_FIELD.label = 3
+_M.GAMESEATEDUPLAYERS_PLAYERS_FIELD.has_default_value = false
+_M.GAMESEATEDUPLAYERS_PLAYERS_FIELD.default_value = {}
+_M.GAMESEATEDUPLAYERS_PLAYERS_FIELD.message_type = _M.GAMEPLAYER
+_M.GAMESEATEDUPLAYERS_PLAYERS_FIELD.type = 11
+_M.GAMESEATEDUPLAYERS_PLAYERS_FIELD.cpp_type = 10
+
+_M.GAMESEATEDUPLAYERS.name = "GameSeatedUPlayers"
+_M.GAMESEATEDUPLAYERS.full_name = ".GameSeatedUPlayers"
+_M.GAMESEATEDUPLAYERS.nested_types = {}
+_M.GAMESEATEDUPLAYERS.enum_types = {}
+_M.GAMESEATEDUPLAYERS.fields = {_M.GAMESEATEDUPLAYERS_PLAYERS_FIELD}
+_M.GAMESEATEDUPLAYERS.is_extendable = false
+_M.GAMESEATEDUPLAYERS.extensions = {}
+
+_M.GamePlayer = protobuf.Message(_M.GAMEPLAYER)
+_M.GameSeatedUPlayers = protobuf.Message(_M.GAMESEATEDUPLAYERS)
 _M.User = protobuf.Message(_M.USER)
 
 return _M

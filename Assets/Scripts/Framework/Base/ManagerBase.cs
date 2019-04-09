@@ -23,7 +23,6 @@ public class ManagerBase : MonoBehaviour
             Debug.LogError("物体注册失败，名字已存在：" + go.name);
             return;
         }
-
         dictGameObjects.Add(go.name, go);
     }
 

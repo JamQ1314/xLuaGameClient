@@ -1,8 +1,6 @@
 GameCache = {}
 local this = GameCache
 
-local userinfo
-
 function this.Init()
-	userinfo = userpb.User()
+	this.userinfo = userpb.User()
 end
