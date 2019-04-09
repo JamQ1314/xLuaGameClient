@@ -1,8 +1,8 @@
 NiuNiuCtrl = {}
 local this = NiuNiuCtrl
-this.RoomID = 123
-this.SeatID = nil
-this.NNPlayers = nil
+this.RoomID = 0
+this.SeatID = 0
+this.NNPlayers = {}
 
 function this.Init()
 	if not NiuNiuView then
@@ -21,4 +21,9 @@ function this.close(go)
 	sInt.simple = this.RoomID
 	data = sInt:SerializeToString()
 	CS.GApp.NetMgr:Send(0,Main_ID.NiuNiu,NiuNiu_ID.Leave,data)
+end
+
+function this.PlayerJion(newPlayer)
+	this.NNPlayers[#this.NNPlayers + 1] =  newPlayer
+	NiuNiuView.
 end

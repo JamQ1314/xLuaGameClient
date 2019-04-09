@@ -37,8 +37,45 @@ function this.open()
 	end
 	--隐藏 翻牌按钮
 	this.transform:Find("showpokesbtn").gameObject:SetActive(false)
+	
+	this.DisPlayers()
 end
 
+function this.DisPlayers()
+	--显示其他角色
+	local nnPlayers = NiuNiuCtrl.NNPlayers
+	local selfSeatID = NiuNiuCtrl.SeatID
+	if #nnPlayers > 1 then
+		for i = 1, #nnPlayers do
+			local pinfo = nnPlayers[i]
+			if pinfo.seatid ~= selfSeatID then
+				local xseatid = pinfo.seatid - selfSeatID
+				if xseatid < 0 then
+					xseatid = xseatid+6
+				end
+				local userspanel = this.transform:Find("players")
+				local playerpanel = userspanel:Find("player"..math.ceil(xseatid))
+				playerpanel.gameObject:SetActive(true)
+				playerpanel:Find("nametx"):GetComponent("UnityEngine.UI.Text").text = pinfo.user.name
+				playerpanel:Find("goldtx"):GetComponent("UnityEngine.UI.Text").text = math.ceil(pinfo.user.gold)
+			end
+		end
+	end
+end
+
+function this.PlayerJion(pinfo)
+	if pinfo.seatid ~= selfSeatID then
+		local xseatid = pinfo.seatid - selfSeatID
+		if xseatid < 0 then
+			xseatid = xseatid+6
+		end
+		local userspanel = this.transform:Find("players")
+		local playerpanel = userspanel:Find("player"..math.ceil(xseatid))
+		playerpanel.gameObject:SetActive(true)
+		playerpanel:Find("nametx"):GetComponent("UnityEngine.UI.Text").text = pinfo.user.name
+		playerpanel:Find("goldtx"):GetComponent("UnityEngine.UI.Text").text = math.ceil(pinfo.user.gold)
+	end
+end
 
 function this.close()
 	

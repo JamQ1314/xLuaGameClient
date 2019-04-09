@@ -28,8 +28,19 @@ end
 function this.DoCreateSuccess(bytes)
 	local simpleint = simplepb.SimpleInt()
 	simpleint:ParseFromString(bytes)
-	
 	NiuNiuCtrl.RoomID = math.ceil(simpleint.simple)
+	
+	NiuNiuCtrl.SeatID = 0
+	
+	local slefPlayer = userpb.GamePlayer()
+	slefPlayer.seatid = 0
+	local userinfo = GameCache.userinfo
+	slefPlayer.user.id = userinfo.id
+	slefPlayer.user.name = userinfo.name
+	slefPlayer.user.gold = userinfo.gold
+	slefPlayer.user.sex = userinfo.sex
+	NiuNiuCtrl.NNPlayers[0] = slefPlayer
+	
 	NiuNiuCtrl.Init()
 end
 
@@ -37,11 +48,17 @@ function this.DoJionSuccess(bytes)
 	local seatPlayers = userpb.GameSeatedUPlayers()
 	seatPlayers:ParseFromString(bytes)
 	
-	NiuNiuCtrl.NNPlayers = seatPlayers.players
+	local nnPlayers = seatPlayers.players
+	NiuNiuCtrl.NNPlayers = nnPlayers
 	
+	for i = 1, #nnPlayers do
+		local pinfo = nnPlayers[i]
+		if pinfo.user.id == GameCache.userinfo.id then
+			NiuNiuCtrl.SeatID = pinfo.seatid
+			break
+		end
+	end
 	NiuNiuCtrl.RoomID = tonumber(JionRoomCtrl.GetRoomID())
-	print("DoJionSuccess : " ..tonumber(JionRoomCtrl.RoomID))
-	print("DoJionSuccess : " ..NiuNiuCtrl.RoomID )
 	NiuNiuCtrl.Init()
 end
 
@@ -52,14 +69,15 @@ function this.DoJionFailure(bytes)
 end
 
 function this.DoPlayerJion(bytes)
-	
+	local newPlayer = userpb.GamePlayer()
+	newPlayer:ParseFromString(bytes)
+	JionRoomCtrl.PlayerJion(newPlayer)
 end
 function this.DoLeaveSuccess(bytes)
 	local user = userpb.User()
 	user:ParseFromString(bytes)
 	--保存数据
 	GameCache.userinfo = user
-	
 	print("返回大厅 :" ..user.id .."   "..user	.name)
 	CS.GApp.UIMgr:CloseAll()
 	--返回大厅
