@@ -25,5 +25,5 @@ end
 
 function this.PlayerJion(newPlayer)
 	this.NNPlayers[#this.NNPlayers + 1] =  newPlayer
-	NiuNiuView.
+	NiuNiuView.PlayerJion(newPlayer)
 end
