@@ -84,7 +84,6 @@ public class NetworkManager : ManagerBase
             return;
         }
 
-        Debug.Log(string.Format("<color=green>Handle  Register , mainid :{0}   name:{1}</color>",main_id,handler));
         dictNetMsgHandlers.Add(main_id, handler);
     }
 

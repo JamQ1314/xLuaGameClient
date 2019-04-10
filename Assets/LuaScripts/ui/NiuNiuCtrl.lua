@@ -13,6 +13,7 @@ end
 
 function this.OnCreate()
 	CS.UIEventListener.Get(NiuNiuView.transform:Find("upright/exitbtn")).onClick = this.close
+	CS.UIEventListener.Get(NiuNiuView.transform:Find("readybtn")).onClick = this.ready
 	
 end
 
@@ -23,7 +24,19 @@ function this.close(go)
 	CS.GApp.NetMgr:Send(0,Main_ID.NiuNiu,NiuNiu_ID.Leave,data)
 end
 
+function this.ready()
+	local sInt = simplepb.SimpleInt()
+	sInt.simple = this.RoomID
+	data = sInt:SerializeToString()
+	
+	CS.GApp.NetMgr:Send(0,Main_ID.NiuNiu,NiuNiu_ID.Ready,data)
+end
+
 function this.PlayerJion(newPlayer)
 	this.NNPlayers[#this.NNPlayers + 1] =  newPlayer
 	NiuNiuView.PlayerJion(newPlayer)
+end
+
+function this.PlayerReady(pseatid)
+	NiuNiuView.PlayerReady(pseatid)
 end

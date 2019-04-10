@@ -11,6 +11,9 @@ function this.Init()
 		require "Net.Handler.NiuNiuHandler"
 		NiuNiuHandler.Init()
 	end
+	--清理历史纪录
+	this.ClearKeybordClick()
+	
 end
 
 function this.OnCreate()

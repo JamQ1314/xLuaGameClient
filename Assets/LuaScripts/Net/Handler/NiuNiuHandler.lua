@@ -20,6 +20,8 @@ function this.HandleMsg(sid,bytes)
 		this.DoPlayerJion(bytes)
 	elseif sid == NiuNiu_ID.LeaveSuccess then
 		this.DoLeaveSuccess(bytes)
+	elseif sid == NiuNiu_ID.ReadySuccess then
+		this.DoReadySuccess(bytes)
 	end
 	
 	
@@ -48,6 +50,7 @@ function this.DoJionSuccess(bytes)
 	local seatPlayers = userpb.GameSeatedUPlayers()
 	seatPlayers:ParseFromString(bytes)
 	
+	NiuNiuCtrl.RoomID = math.ceil(seatPlayers.roomid)
 	local nnPlayers = seatPlayers.players
 	NiuNiuCtrl.NNPlayers = nnPlayers
 	
@@ -58,7 +61,6 @@ function this.DoJionSuccess(bytes)
 			break
 		end
 	end
-	NiuNiuCtrl.RoomID = tonumber(JionRoomCtrl.GetRoomID())
 	NiuNiuCtrl.Init()
 end
 
@@ -71,7 +73,7 @@ end
 function this.DoPlayerJion(bytes)
 	local newPlayer = userpb.GamePlayer()
 	newPlayer:ParseFromString(bytes)
-	JionRoomCtrl.PlayerJion(newPlayer)
+	NiuNiuCtrl.PlayerJion(newPlayer)
 end
 function this.DoLeaveSuccess(bytes)
 	local user = userpb.User()
@@ -82,4 +84,12 @@ function this.DoLeaveSuccess(bytes)
 	CS.GApp.UIMgr:CloseAll()
 	--返回大厅
 	LobbyCtrl.Init()
+end
+
+--玩家准备
+function this.DoReadySuccess(bytes)
+	local msg = simplepb.SimpleInt()
+	msg:ParseFromString(bytes)
+	NiuNiuCtrl.PlayerReady(math.ceil(msg.simple))
+	
 end

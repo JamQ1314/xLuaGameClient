@@ -60,8 +60,15 @@ namespace user
       get { return _seatid; }
       set { _seatid = value; }
     }
+    private int _state;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"state", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int state
+    {
+      get { return _state; }
+      set { _state = value; }
+    }
     private User _user;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"user", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"user", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public User user
     {
       get { return _user; }
@@ -77,8 +84,15 @@ namespace user
   {
     public GameSeatedUPlayers() {}
     
+    private int _roomid;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"roomid", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int roomid
+    {
+      get { return _roomid; }
+      set { _roomid = value; }
+    }
     private readonly global::System.Collections.Generic.List<GamePlayer> _players = new global::System.Collections.Generic.List<GamePlayer>();
-    [global::ProtoBuf.ProtoMember(1, Name=@"players", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::ProtoBuf.ProtoMember(2, Name=@"players", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<GamePlayer> players
     {
       get { return _players; }

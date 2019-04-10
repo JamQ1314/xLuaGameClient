@@ -7,9 +7,11 @@ message User {
 
 message GamePlayer{
 	required int32 seatid = 1;
-	required User user = 2;
+	required int32 state = 2;
+	required User user = 3;
 }
 
 message GameSeatedUPlayers{
-	repeated GamePlayer players = 1;
+	required int32 roomid = 1;
+	repeated GamePlayer players = 2;
 }
