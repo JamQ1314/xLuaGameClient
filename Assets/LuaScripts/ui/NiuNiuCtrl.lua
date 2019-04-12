@@ -6,6 +6,13 @@ this.HostID = 0 --庄家ID
 this.NNPlayers = {}
 this.UserInfo = GameCache.userinfo
 
+function this.DataInit()
+	this.RoomID = 0
+	this.SeatID = 0
+	this.HostID = 0 --庄家ID
+	this.NNPlayers = {}
+	this.UserInfo = GameCache.userinfo
+end
 function this.Init()
 	if not NiuNiuView then
 		require "ui.NiuNiuView"
@@ -35,7 +42,6 @@ function this.ready()
 end
 
 function this.PlayerJion(newPlayer)
-	this.NNPlayers[#this.NNPlayers + 1] =  newPlayer
 	NiuNiuView.PlayerJion(newPlayer)
 end
 

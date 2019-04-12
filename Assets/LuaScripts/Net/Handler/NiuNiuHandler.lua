@@ -34,6 +34,7 @@ end
 function this.DoCreateSuccess(bytes)
 	local simpleint = simplepb.SimpleInt()
 	simpleint:ParseFromString(bytes)
+	NiuNiuCtrl.DataInit()
 	NiuNiuCtrl.RoomID = math.ceil(simpleint.simple)
 	
 	NiuNiuCtrl.SeatID = 0
@@ -45,6 +46,7 @@ function this.DoCreateSuccess(bytes)
 	slefPlayer.user.name = userinfo.name
 	slefPlayer.user.gold = userinfo.gold
 	slefPlayer.user.sex = userinfo.sex
+	
 	NiuNiuCtrl.NNPlayers[0] = slefPlayer
 	
 	NiuNiuCtrl.Init()
@@ -54,6 +56,7 @@ function this.DoJionSuccess(bytes)
 	local seatPlayers = userpb.GameSeatedUPlayers()
 	seatPlayers:ParseFromString(bytes)
 	
+	NiuNiuCtrl.DataInit()
 	NiuNiuCtrl.RoomID = math.ceil(seatPlayers.roomid)
 	NiuNiuCtrl.HostID = math.ceil(seatPlayers.hostid)
 	

@@ -25,7 +25,10 @@ NiuNiu_ID = {
 	JionFailure = 103,
 	PlayerJion = 104,
 	LeaveSuccess = 105,
-	ReadySuccess = 106,
-	TurnHost = 107,
-	GameDeal = 108,
+	LeaveFailure = 106,
+	ReadySuccess = 107,
+	TurnHost = 108, -- 换装
+	GameDeal = 109, -- 发牌
+	TimeCount = 110, -- 倒计时
+	GameLay = 111, --亮牌
 	}

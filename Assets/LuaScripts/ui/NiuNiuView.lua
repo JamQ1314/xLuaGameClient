@@ -124,7 +124,7 @@ function this.GameDeal(cards)
 			for i = 0, 4 do
 				local n = math.ceil(cards[i+1])
 				local cardName =string.format("Card_%d_%d",math.modf(n/100),math.fmod(n,100))
-				print("自己显示卡牌 "..cardName)
+				--print("自己显示卡牌 "..cardName)
 				local card = this.transform:GetComponent(typeof(CS.GameAssetsContainer)):GetTex(cardName)
 				playerpanel:Find("pokes/poke"..i):GetComponent(typeof(CS.UnityEngine.UI.Image)).sprite = card
 			end
