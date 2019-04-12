@@ -2,9 +2,13 @@ NiuNiuView = {}
 local this = NiuNiuView
 local AllPlayerPanels = {} 
 
+local noReadySprite
+local ReadySprite 
 function this.awake(go)
 	this.transform = go.transform
 	this.gameobject = go;
+	
+	
 end
 
 function  this.start()
@@ -21,13 +25,14 @@ end
 
 function this.open()
 	AllPlayerPanels = {}
+	noReadySprite = this.transform:GetComponent(typeof(CS.GameAssetsContainer)):GetTex("moren")
+	ReadySprite = this.transform:GetComponent(typeof(CS.GameAssetsContainer)):GetTex("dangqian")
 	
 	this.transform:Find("roominfo/roomid"):GetComponent("UnityEngine.UI.Text").text = "房号:"..NiuNiuCtrl.RoomID
 	--显示自身信息 隐藏其他角色
 	local userinfo = GameCache.userinfo
 	local userspanel = this.transform:Find("players")
 	--获取为准备头像框
-	local noReadySprite = this.transform:GetComponent(typeof(CS.GameAssetsContainer)):GetTex("moren")
 	for i = 0, 5 do
 		local playerpanel = userspanel:Find("player"..i)
 		playerpanel:GetComponent(typeof(CS.UnityEngine.UI.Image)).sprite = noReadySprite
@@ -63,7 +68,6 @@ function this.DisPlayers()
 				local userspanel = this.transform:Find("players")
 				local playerpanel = userspanel:Find("player"..math.ceil(xseatid))
 				if pinfo.state ==1 then --玩家状态为准备
-					local ReadySprite = this.transform:GetComponent(typeof(CS.GameAssetsContainer)):GetTex("dangqian")
 					playerpanel:GetComponent(typeof(CS.UnityEngine.UI.Image)).sprite = ReadySprite
 				end
 				
@@ -86,7 +90,6 @@ function this.PlayerJion(pinfo)
 		local userspanel = this.transform:Find("players")
 		local playerpanel = userspanel:Find("player"..math.ceil(xseatid))
 		AllPlayerPanels[xseatid] = playerpanel
-		local noReadySprite = this.transform:GetComponent(typeof(CS.GameAssetsContainer)):GetTex("moren")
 		playerpanel:GetComponent(typeof(CS.UnityEngine.UI.Image)).sprite = noReadySprite
 		playerpanel.gameObject:SetActive(true)
 		playerpanel:Find("nametx"):GetComponent("UnityEngine.UI.Text").text = pinfo.user.name
@@ -105,7 +108,6 @@ function this.PlayerReady(pSeatID)
 	local xseatid = this.GetXSeatID(pSeatID)
 	local playerpanel = this.GetPlayerPanelByXSeatID(xseatid)
 	--更改头像框 高亮为准备状态
-	local ReadySprite = this.transform:GetComponent(typeof(CS.GameAssetsContainer)):GetTex("dangqian")
 	playerpanel:GetComponent(typeof(CS.UnityEngine.UI.Image)).sprite = ReadySprite
 	
 	if xseatid == 0 then
@@ -117,7 +119,6 @@ end
 function this.GameDeal(cards)
 	for k, v in pairs(AllPlayerPanels) do
 		local playerpanel = v
-		local noReadySprite = this.transform:GetComponent(typeof(CS.GameAssetsContainer)):GetTex("moren")
 		playerpanel:GetComponent(typeof(CS.UnityEngine.UI.Image)).sprite = noReadySprite
 		playerpanel:Find("pokes").gameObject:SetActive(true)
 		if k == 0 then
