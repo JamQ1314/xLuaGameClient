@@ -22,6 +22,10 @@ function this.HandleMsg(sid,bytes)
 		this.DoLeaveSuccess(bytes)
 	elseif sid == NiuNiu_ID.ReadySuccess then
 		this.DoReadySuccess(bytes)
+	elseif sid == NiuNiu_ID.TurnHost then
+		this.DoTurnHost(bytes)
+	elseif sid == NiuNiu_ID.GameDeal then
+		this.DoGameDeal(bytes)
 	end
 	
 	
@@ -51,6 +55,8 @@ function this.DoJionSuccess(bytes)
 	seatPlayers:ParseFromString(bytes)
 	
 	NiuNiuCtrl.RoomID = math.ceil(seatPlayers.roomid)
+	NiuNiuCtrl.HostID = math.ceil(seatPlayers.hostid)
+	
 	local nnPlayers = seatPlayers.players
 	NiuNiuCtrl.NNPlayers = nnPlayers
 	
@@ -69,27 +75,37 @@ function this.DoJionFailure(bytes)
 	msg:ParseFromString(bytes)
 	JionRoomCtrl.JionRoomFailuer(msg.simple)
 end
-
+--玩家加入游戏
 function this.DoPlayerJion(bytes)
 	local newPlayer = userpb.GamePlayer()
 	newPlayer:ParseFromString(bytes)
 	NiuNiuCtrl.PlayerJion(newPlayer)
 end
+--离开游戏
 function this.DoLeaveSuccess(bytes)
-	local user = userpb.User()
-	user:ParseFromString(bytes)
-	--保存数据
-	GameCache.userinfo = user
-	print("返回大厅 :" ..user.id .."   "..user	.name)
-	CS.GApp.UIMgr:CloseAll()
-	--返回大厅
-	LobbyCtrl.Init()
+	local msg = simplepb.SimpleInt()
+	msg:ParseFromString(bytes)
+	NiuNiuCtrl.PlayerLeave(math.ceil(msg.simple))
 end
-
 --玩家准备
 function this.DoReadySuccess(bytes)
 	local msg = simplepb.SimpleInt()
 	msg:ParseFromString(bytes)
 	NiuNiuCtrl.PlayerReady(math.ceil(msg.simple))
+end
+--切换庄家
+function this.DoTurnHost(bytes)
+	local msg = simplepb.SimpleInt()
+	msg:ParseFromString(bytes)
+	NiuNiuCtrl.TurnHost(math.ceil(msg.simple))
+end
+
+function this.DoGameDeal(bytes)
+	local msg = cardpb.OnePlayerCards()
+	msg:ParseFromString(bytes)
 	
+	str = "收到卡牌"..msg.cards[1].."  "..msg.cards[2].."  "..msg.cards[3].."  "..msg.cards[4].."  "..msg.cards[5]
+	print(str)
+	
+	NiuNiuCtrl.GameDeal(msg.cards)
 end

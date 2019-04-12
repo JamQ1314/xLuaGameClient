@@ -98,6 +98,13 @@ namespace user
       get { return _players; }
     }
   
+    private int _hostid;
+    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"hostid", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int hostid
+    {
+      get { return _hostid; }
+      set { _hostid = value; }
+    }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }

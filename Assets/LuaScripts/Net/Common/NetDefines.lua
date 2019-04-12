@@ -17,8 +17,7 @@ NiuNiu_ID = {
 	Jion =2,
 	Leave =3,
 	Ready =4,
-	Start = 5,
-	TimeCount = 6,
+	TimeCount = 5,
 	
 	
 	CreateSuccess = 101,
@@ -26,5 +25,7 @@ NiuNiu_ID = {
 	JionFailure = 103,
 	PlayerJion = 104,
 	LeaveSuccess = 105,
-	ReadySuccess = 106
+	ReadySuccess = 106,
+	TurnHost = 107,
+	GameDeal = 108,
 	}

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 83edf79e18109844b83d0bd9f58d319c
-timeCreated: 1509288077
+guid: 3d7d2e7edf0d6f24094696d86319ad34
+timeCreated: 1554907688
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName: {}
@@ -34,9 +34,9 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapU: -1
-    wrapV: -1
-    wrapW: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -72,5 +72,5 @@ TextureImporter:
     physicsShape: []
   spritePackingTag: 
   userData: 
-  assetBundleName: dependencies/83edf79e18109844b83d0bd9f58d319c
+  assetBundleName: 
   assetBundleVariant: 

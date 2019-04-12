@@ -1,0 +1,8 @@
+message OnePlayerCards {
+	required int32 seatid = 1;
+	repeated int32 cards =2;
+}
+
+message AllPlayersCards {
+	repeated OnePlayerCards oneplayercards = 1;
+}
