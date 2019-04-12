@@ -22,8 +22,22 @@ namespace card
       get { return _seatid; }
       set { _seatid = value; }
     }
+    private int _nntype;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"nntype", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int nntype
+    {
+      get { return _nntype; }
+      set { _nntype = value; }
+    }
+    private int _xgold;
+    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"xgold", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int xgold
+    {
+      get { return _xgold; }
+      set { _xgold = value; }
+    }
     private readonly global::System.Collections.Generic.List<int> _cards = new global::System.Collections.Generic.List<int>();
-    [global::ProtoBuf.ProtoMember(2, Name=@"cards", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::ProtoBuf.ProtoMember(4, Name=@"cards", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
     public global::System.Collections.Generic.List<int> cards
     {
       get { return _cards; }

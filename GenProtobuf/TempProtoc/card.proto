@@ -1,6 +1,8 @@
 message OnePlayerCards {
 	required int32 seatid = 1;
-	repeated int32 cards =2;
+	required int32 nntype = 2;
+	required int32 xgold = 3;
+	repeated int32 cards =4;
 }
 
 message AllPlayersCards {
