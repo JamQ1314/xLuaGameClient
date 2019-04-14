@@ -179,6 +179,7 @@ function this.GameLay(allcards)
 				result = resultpanel:Find("lose")
 			end
 			result.gameObject:SetActive(true)
+			result:Find("Text"):GetComponent(typeof(CS.UnityEngine.UI.Text)).text = math.ceil(selfcards.xgold)
 			local audio = result:GetComponent(typeof(AudioSource))
 			audio:Play()
 			coroutine.yield(CS.UnityEngine.WaitForSeconds(6))
@@ -186,11 +187,17 @@ function this.GameLay(allcards)
 			result.gameObject:SetActive(fale)
 			
 			--初始化
-			
+			this.NextGame()
 	end)
 end
 
-
+function this.NextGame()
+	for k, v in pairs(AllPlayerPanels) do
+		local playerpanel = v
+		playerpanel:Find("pokes").gameObject:SetActive(fales)
+	end
+	this.transform:Find("readybtn").gameObject:SetActive(true)
+end
 
 
 function this.GetXSeatID(seatid)
