@@ -8,8 +8,12 @@ WWW = CS.UnityEngine.WWW;
 GameObject = CS.UnityEngine.GameObject;
 Color = CS.UnityEngine.Color;
 Vector3 = CS.UnityEngine.Vector3;
+AudioSource = CS.UnityEngine.AudioSource
+
+co_runner = require "util.CoroutineRunner"
 
 require "UnitTest.CommonTest"
+CommonTest.DoTest()
 
 require "Common.GameManager"
 GameManager.Start()

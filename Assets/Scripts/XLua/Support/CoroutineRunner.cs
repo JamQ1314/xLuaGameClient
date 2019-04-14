@@ -7,7 +7,7 @@ using System;
 [Hotfix]
 public class CoroutineRunner : MonoBehaviour
 {
-    public void YieldAndCallback(object toYield, Action callback)
+    public void YieldAndCallback(object toYield, Action callback = null)
     {
         StartCoroutine(CoBody(toYield, callback));
     }
@@ -18,7 +18,8 @@ public class CoroutineRunner : MonoBehaviour
             yield return StartCoroutine((IEnumerator)toYield);
         else
             yield return toYield;
-        callback();
+        if (callback != null)
+            callback();
     }
 }
 

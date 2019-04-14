@@ -1,7 +1,7 @@
 NiuNiuCtrl = {}
 local this = NiuNiuCtrl
 this.RoomID = 0
-this.SeatID = 0
+this.SeatID = 0 --自己服务器座位ID
 this.HostID = 0 --庄家ID
 this.NNPlayers = {}
 this.UserInfo = GameCache.userinfo
@@ -21,6 +21,7 @@ function this.Init()
 end
 
 function this.OnCreate()
+	print(NiuNiuView.transform.name)
 	CS.UIEventListener.Get(NiuNiuView.transform:Find("upright/exitbtn")).onClick = this.close
 	CS.UIEventListener.Get(NiuNiuView.transform:Find("readybtn")).onClick = this.ready
 	
@@ -68,4 +69,20 @@ end
 
 function this.GameDeal(cards)
 	NiuNiuView.GameDeal(cards)
+end
+
+function this.TimeCount(seconds)
+	local clock = NiuNiuView.transform:Find("clock")
+	local clokScripts = clock:GetComponent(typeof(CS.Clock))
+	clokScripts:TimeDown(seconds)
+end
+
+function this.GameLay(allinfo)
+	local allcards = {}
+	for i = 1, #allinfo do
+		local oneinfo = allinfo[i]
+		allcards[oneinfo.seatid] = oneinfo
+	end
+	
+	NiuNiuView.GameLay(allcards)
 end

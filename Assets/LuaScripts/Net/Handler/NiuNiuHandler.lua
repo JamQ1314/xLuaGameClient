@@ -26,6 +26,10 @@ function this.HandleMsg(sid,bytes)
 		this.DoTurnHost(bytes)
 	elseif sid == NiuNiu_ID.GameDeal then
 		this.DoGameDeal(bytes)
+	elseif sid == NiuNiu_ID.TimeCount then
+		this.DoTimeCount(bytes)
+	elseif sid == NiuNiu_ID.GameLay then
+		this.DoGameLay(bytes)
 	end
 	
 	
@@ -111,4 +115,17 @@ function this.DoGameDeal(bytes)
 	print(str)
 	
 	NiuNiuCtrl.GameDeal(msg.cards)
+end
+
+function this.DoTimeCount(bytes)
+	local msg = simplepb.SimpleInt()
+	msg:ParseFromString(bytes)
+	NiuNiuCtrl.TimeCount(math.ceil(msg.simple))
+end
+
+function this.DoGameLay(bytes)
+	local msg = cardpb.AllPlayersCards()
+	msg:ParseFromString(bytes)
+	
+	NiuNiuCtrl.GameLay(msg.oneplayercards)
 end

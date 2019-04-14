@@ -6,9 +6,7 @@ local noReadySprite
 local ReadySprite 
 function this.awake(go)
 	this.transform = go.transform
-	this.gameobject = go;
-	
-	
+	this.gameobject = go
 end
 
 function  this.start()
@@ -121,6 +119,8 @@ function this.GameDeal(cards)
 		local playerpanel = v
 		playerpanel:GetComponent(typeof(CS.UnityEngine.UI.Image)).sprite = noReadySprite
 		playerpanel:Find("pokes").gameObject:SetActive(true)
+		playerpanel:Find("pokes/nntype").gameObject:SetActive(false)
+		
 		if k == 0 then
 			for i = 0, 4 do
 				local n = math.ceil(cards[i+1])
@@ -131,9 +131,67 @@ function this.GameDeal(cards)
 			end
 		end
 	end
-		
-	
 end
+
+
+function this.GameLay(allcards)
+	local hostid = NiuNiuCtrl.HostID
+	co_runner.start(function ()
+			for i = 0, 5 do
+				local id = hostid +i
+				if id>5 then
+					id = id - 6
+				end
+				if allcards[id] ~= nil then
+					local xseatid = this.GetXSeatID(id)
+					local playerpanel = this.GetPlayerPanelByXSeatID(xseatid)
+					local pokepanel = playerpanel:Find("pokes")
+					for i = 0, 4 do
+						local n = math.ceil(allcards[id].cards[i+1])
+						local cardName =string.format("Card_%d_%d",math.modf(n/100),math.fmod(n,100))
+						local card = this.transform:GetComponent(typeof(CS.GameAssetsContainer)):GetTex(cardName)
+						local pokeName = "poke"..i
+						local poke = pokepanel:Find("poke"..i)
+						local pokesprite = poke:GetComponent(typeof(CS.UnityEngine.UI.Image))
+						pokesprite.sprite = card
+					end
+					local nntypename = "niu_"..math.ceil(allcards[id].nntype)
+					local nntypesprite = this.transform:GetComponent(typeof(CS.GameAssetsContainer)):GetTex(nntypename)
+					local uinntype = pokepanel:Find("nntype")
+					uinntype.gameObject:SetActive(true)
+					uinntype:GetComponent(typeof(CS.UnityEngine.UI.Image)).sprite = nntypesprite
+					
+					local nntypesoundname = "manbull"..math.ceil(allcards[id].nntype)
+					local nntypesound = this.transform:GetComponent(typeof(CS.GameAssetsContainer)):GetSound(nntypesoundname)
+					local audio = playerpanel:GetComponent(typeof(CS.UnityEngine.AudioSource))
+					audio.clip = nntypesound
+					audio:Play()
+					coroutine.yield(CS.UnityEngine.WaitForSeconds(1))
+				end
+			end
+			--显示结果
+			local selfcards = allcards[NiuNiuCtrl.SeatID]
+			local resultpanel = this.transform:Find("result")
+			local result
+			if selfcards.xgold >0 then
+				result = resultpanel:Find("win")
+			else
+				result = resultpanel:Find("lose")
+			end
+			result.gameObject:SetActive(true)
+			local audio = result:GetComponent(typeof(AudioSource))
+			audio:Play()
+			coroutine.yield(CS.UnityEngine.WaitForSeconds(6))
+			audio:Stop()
+			result.gameObject:SetActive(fale)
+			
+			--初始化
+			
+	end)
+end
+
+
+
 
 function this.GetXSeatID(seatid)
 	local selfSeatID = NiuNiuCtrl.SeatID
