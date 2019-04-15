@@ -52,7 +52,7 @@ function this.DoCreateSuccess(bytes)
 	slefPlayer.user.sex = userinfo.sex
 	
 	NiuNiuCtrl.NNPlayers[0] = slefPlayer
-	
+	CS.GApp.UIMgr:CloseAll()
 	NiuNiuCtrl.Init()
 end
 
@@ -74,6 +74,7 @@ function this.DoJionSuccess(bytes)
 			break
 		end
 	end
+	CS.GApp.UIMgr:CloseAll()
 	NiuNiuCtrl.Init()
 end
 

@@ -128,9 +128,10 @@ public class AssetUpdateHelper : MonoBehaviour
         newManifestAssetBundle.Unload(false); //释放AssetBundle
 
         string localManifestPath = ResPath.LocalPath + ResPath.ManifestName;
-        //Debug.Log("localManifestPath : "+ localManifestPath);
+        Debug.Log("localManifestPath : "+ localManifestPath);
         if (File.Exists(localManifestPath))
         {
+            print("localManifestPath exsit ");
             WWW wwwLocalManifest = new WWW("file://" + localManifestPath);
             yield return wwwLocalManifest;
             if (!string.IsNullOrEmpty(wwwLocalManifest.error))
@@ -176,7 +177,6 @@ public class AssetUpdateHelper : MonoBehaviour
                 lUpdateFile.Add(allNewAssetBundles[i]);
             }
         }
-
         if (onLoad != null)
             onLoad();
     }

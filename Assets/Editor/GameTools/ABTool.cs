@@ -100,7 +100,36 @@ public class ABTool : EditorWindow
 
         for (int i = 0; i < dirs.Length; i++)
         {
-            GetFiles(dirs[i].FullName);
+             GetFiles(dirs[i].FullName);
+        }
+    }
+    /// <summary>
+    /// 以文件夹为名 整体打包
+    /// </summary>
+    public static void FoldPack(DirectoryInfo dir)
+    {
+        var files = dir.GetFiles();
+        var dirs = dir.GetDirectories();
+        for (int i = 0; i < files.Length; i++)
+        {
+            if (files[i].Extension != ".meta")
+            {
+                var file = files[i];
+                // 资源在项目下的路径Assets /.../...
+                var absFilePath = file.FullName.Replace("\\", "/");
+                var projectPath = Directory.GetCurrentDirectory().Replace("\\", "/") + "/";
+                string pathBellowProject = absFilePath.Replace(projectPath, string.Empty);
+                //加载资源 路径必须为 Assets/.../...
+                AssetImporter importer = AssetImporter.GetAtPath(pathBellowProject);
+                importer.assetBundleName = dir.Name;
+
+            }
+                DoMark(files[i]);
+        }
+
+        for (int i = 0; i < dirs.Length; i++)
+        {
+            FoldPack(dirs[i]);
         }
     }
 

@@ -31,5 +31,5 @@ end
 
 
 function LoginCtrl.netConn()
-	CS.GApp.NetMgr:Connect(0,"127.0.0.1",5555)
+	CS.GApp.NetMgr:Connect(0,"111.230.129.194",5555)
 end

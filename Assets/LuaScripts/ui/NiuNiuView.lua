@@ -115,6 +115,7 @@ function this.PlayerReady(pSeatID)
 end
 
 function this.GameDeal(cards)
+	this.transform:Find("bpoke"):GeComponent(typeof(CS.UnityEngine.AudioSource)):Play()
 	for k, v in pairs(AllPlayerPanels) do
 		local playerpanel = v
 		playerpanel:GetComponent(typeof(CS.UnityEngine.UI.Image)).sprite = noReadySprite
@@ -129,7 +130,15 @@ function this.GameDeal(cards)
 				local card = this.transform:GetComponent(typeof(CS.GameAssetsContainer)):GetTex(cardName)
 				playerpanel:Find("pokes/poke"..i):GetComponent(typeof(CS.UnityEngine.UI.Image)).sprite = card
 			end
+		else
+			for i = 0, 4 do
+				local cardName ="Card_0_0"
+				--print("自己显示卡牌 "..cardName)
+				local card = this.transform:GetComponent(typeof(CS.GameAssetsContainer)):GetTex(cardName)
+				playerpanel:Find("pokes/poke"..i):GetComponent(typeof(CS.UnityEngine.UI.Image)).sprite = card
+			end
 		end
+		
 	end
 end
 
@@ -182,6 +191,10 @@ function this.GameLay(allcards)
 			result:Find("Text"):GetComponent(typeof(CS.UnityEngine.UI.Text)).text = math.ceil(selfcards.xgold)
 			local audio = result:GetComponent(typeof(AudioSource))
 			audio:Play()
+		
+			--金币跳动
+			this.XGold(allcards)
+			--等待音效
 			coroutine.yield(CS.UnityEngine.WaitForSeconds(6))
 			audio:Stop()
 			result.gameObject:SetActive(fale)
@@ -189,6 +202,17 @@ function this.GameLay(allcards)
 			--初始化
 			this.NextGame()
 	end)
+end
+
+function  this.XGold(allcards)
+	for i = 0, 5 do
+		if allcards[i]~= nil then
+			local xseatid = this.GetXSeatID(i)
+			local playerpanel = this.GetPlayerPanelByXSeatID(xseatid)
+			local goldScript = playerpanel:Find("goldtx"):GetComponent(typeof(CS.Gold))
+			goldScript:XGold(math.ceil(allcards[i].xgold))
+		end
+	end
 end
 
 function this.NextGame()

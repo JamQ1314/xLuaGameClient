@@ -47,8 +47,7 @@ public class UIResUpdate : MonoBehaviour
     private IEnumerator ieShowProcess(float value)
     {
         var tempValue = loadProcessBar.value;
-        if (tempValue > value)
-            tempValue = 0;
+        print(string.Format("tempvalue {0}   vlua  {1}",tempValue,value));
         while (tempValue < value)
         {
             tempValue += 0.01f;

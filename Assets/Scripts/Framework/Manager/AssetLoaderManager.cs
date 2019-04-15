@@ -99,10 +99,11 @@ public class AssetLoaderManager : ManagerBase
         }
         else
         {
+            Release();//释放前面的资源
+
             var tagName = assetName.Substring(assetName.LastIndexOf(".") + 1);
             Object o = Load<Object>(tagName);
             GameObject go = (GameObject)Instantiate(o);
-            Invoke("Release", 3.0f);
             return go;
         }
     }
@@ -114,7 +115,12 @@ public class AssetLoaderManager : ManagerBase
     /// <returns></returns>
     private AssetBundle LoadAssetBundle(string abName)
     {
-        AssetBundle ab = AssetBundle.LoadFromFile(ResPath.LocalPath + "/" + abName);
+        string abPath = ResPath.LocalPath + "/" + abName;
+        //方法1
+        //AssetBundle ab = AssetBundle.LoadFromFile(ResPath.LocalPath + "/" + abName);
+        //方法2
+        //WWW www = WWW.LoadFromCacheOrDownload(@"file:/"+ ResPath.LocalPath + "/" + abName,1);
+        AssetBundle ab = AssetBundle.LoadFromMemory(File.ReadAllBytes(abPath));
         lCacheDenpendences.Add(ab);
         return ab;
     }

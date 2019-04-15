@@ -46,6 +46,9 @@ public class NetworkManager : ManagerBase
             nSocket = new NSocket(socketID);
             ConnSockets.Add(socketID, nSocket);
         }
+
+        if (GApp.Ins.GMode == GameMode.Debug)
+            host = "127.0.0.1";
         nSocket.ConnAsync(host, port);
     }
 
