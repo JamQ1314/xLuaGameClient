@@ -4,6 +4,8 @@
 //#define TOLUA
 //#define ULUA
 
+#if UNITY_EDITOR
+
 using System;
 using System.Reflection;
 using System.Collections.Generic;
@@ -43,19 +45,14 @@ namespace LuaPerfect
         [MenuItem("LuaPerfect/Generate Apis", false, 2)]
         public static void GenerateApis()
         {
-            string targetDirectory1 = Application.dataPath + "\\.lpproj\\Apis\\Unity";
-            if (Directory.Exists(targetDirectory1))
-            {
-                DirectoryInfo di = new DirectoryInfo(targetDirectory1);
-                di.Delete(true);
-            }
+            // You can implement your own api generator by calling these public functions
             BeginGenerate();
             GenerateUnityModules();
             GenerateUserModules();
             EndGenerate();
         }
 
-        private static void GenerateUnityModules()
+        public static void GenerateUnityModules()
         {
             GenerateModule("UnityEngine");
             GenerateModule("UnityEngine.CoreModule");
@@ -65,13 +62,13 @@ namespace LuaPerfect
             GenerateModule("UnityEngine.Advertisements");
         }
 
-        private static void GenerateUserModules()
+        public static void GenerateUserModules()
         {
             GenerateModule("Assembly-CSharp");
             GenerateModule("Assembly-CSharp-firstpass");
         }
 
-        private static void GenerateModule(string assemblyName)
+        public static void GenerateModule(string assemblyName)
         {
             Assembly assembly;
             try
@@ -397,20 +394,33 @@ namespace LuaPerfect
                 return;
             }
             string targetPath = String.Format("{0}\\{1}.lua", targetDirectory2, type.Name);
+            StreamWriter streamWriter = null;
             try
             {
-                StreamWriter streamWriter = new StreamWriter(targetPath);
+                streamWriter = new StreamWriter(targetPath);
                 streamWriter.Write(typeString1);
-                streamWriter.Close();
                 anyFileChanged = true;
             }
             catch
             {
             }
+            finally
+            {
+                if (streamWriter != null)
+                {
+                    streamWriter.Close();
+                }
+            }
         }
 
         public static void BeginGenerate()
         {
+            string targetDirectory1 = Application.dataPath + "\\.lpproj\\Apis\\Unity";
+            if (Directory.Exists(targetDirectory1))
+            {
+                DirectoryInfo di = new DirectoryInfo(targetDirectory1);
+                di.Delete(true);
+            }
             targetDirectory = Application.dataPath + "\\.lpproj\\Apis\\Unity";
             anyFileChanged = false;
             Directory.CreateDirectory(targetDirectory);
@@ -431,3 +441,5 @@ namespace LuaPerfect
         }
     }
 }
+
+#endif

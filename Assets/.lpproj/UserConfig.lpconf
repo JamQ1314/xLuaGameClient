@@ -2,7 +2,7 @@
 <BreakpointList/>
 <WatchList/>
 <ProjectUI>
-  <TreeState BaseX = "0" BaseY = "0" AlternativeItem = "LuaFolders#Assets#LuaScripts#ui#LoginView.lua">
+  <TreeState BaseX = "0" BaseY = "-180" AlternativeItem = "LuaFolders#Assets#LuaScripts#ui#LoginView.lua">
     <SelectedList>
       <Selected Path = "LuaFolders#Assets#LuaScripts#ui#LoginCtrl.lua"/>
     </SelectedList>
@@ -32,11 +32,11 @@
   Width = "1280"
   Height = "720"
   Maximized = "true"
-  LastCodeFilename = "E:/Projects/unity/2017/Game/Assets/LuaScripts/ui/LoginCtrl.lua">
+  LastCodeFilename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/LoginCtrl.lua">
   <DockingControl>
     <DockingNode DockingDirection = "Horizontal">
       <DockingNode DockingDirection = "None">
-        <DockingBlock Width = "416" Height = "933" DocumentStyle = "false">
+        <DockingBlock Width = "292" Height = "611" DocumentStyle = "false">
           <DockingCard
             Text = "Project"
             Tag = ""
@@ -49,95 +49,36 @@
             ActivateTime = "0"/>
         </DockingBlock>
       </DockingNode>
-      <DockingNode DockingDirection = "Vertical">
-        <DockingNode DockingDirection = "None">
-          <DockingBlock Width = "1485" Height = "679" DocumentStyle = "true">
-            <DockingCard
-              Text = "NiuNiuHandler.lua"
-              Tag = "E:/Projects/unity/2017/Game/Assets/LuaScripts/Net/Handler/NiuNiuHandler.lua"
-              ActivePage = "false"
-              ActivateTime = "179506001"
-              CaretLineIndex = "54"
-              CaretCodeCharIndex = "25"
-              BaseX = "0"
-              BaseY = "-990"/>
-            <DockingCard
-              Text = "NiuNiuCtrl.lua"
-              Tag = "E:/Projects/unity/2017/Game/Assets/LuaScripts/ui/NiuNiuCtrl.lua"
-              ActivePage = "false"
-              ActivateTime = "178814385"
-              CaretLineIndex = "53"
-              CaretCodeCharIndex = "26"
-              BaseX = "0"
-              BaseY = "-858"/>
-            <DockingCard
-              Text = "NiuNiuView.lua"
-              Tag = "E:/Projects/unity/2017/Game/Assets/LuaScripts/ui/NiuNiuView.lua"
-              ActivePage = "false"
-              ActivateTime = "177691849"
-              CaretLineIndex = "194"
-              CaretCodeCharIndex = "22"
-              BaseX = "0"
-              BaseY = "-4686"/>
-            <DockingCard
-              Text = "LoginCtrl.lua"
-              Tag = "E:/Projects/unity/2017/Game/Assets/LuaScripts/ui/LoginCtrl.lua"
-              ActivePage = "true"
-              ActivateTime = "229832380"
-              CaretLineIndex = "34"
-              CaretCodeCharIndex = "3"
-              BaseX = "0"
-              BaseY = "-330"/>
-            <DockingCard
-              Text = "main.lua"
-              Tag = "E:/Projects/unity/2017/Game/Assets/LuaScripts/main.lua"
-              ActivePage = "false"
-              ActivateTime = "179515945"
-              CaretLineIndex = "0"
-              CaretCodeCharIndex = "0"
-              BaseX = "0"
-              BaseY = "0"/>
-          </DockingBlock>
-        </DockingNode>
-        <DockingNode DockingDirection = "None">
-          <DockingBlock Width = "1485" Height = "247" DocumentStyle = "false">
-            <DockingCard
-              Text = "Output"
-              Tag = ""
-              ActivePage = "true"
-              ActivateTime = "0"/>
-            <DockingCard
-              Text = "Call Stack"
-              Tag = ""
-              ActivePage = "false"
-              ActivateTime = "0"/>
-            <DockingCard
-              Text = "Locals"
-              Tag = ""
-              ActivePage = "false"
-              ActivateTime = "0"/>
-            <DockingCard
-              Text = "Globals"
-              Tag = ""
-              ActivePage = "false"
-              ActivateTime = "0"/>
-            <DockingCard
-              Text = "Watches"
-              Tag = ""
-              ActivePage = "false"
-              ActivateTime = "0"/>
-            <DockingCard
-              Text = "Autos"
-              Tag = ""
-              ActivePage = "false"
-              ActivateTime = "0"/>
-            <DockingCard
-              Text = "Breakpoints"
-              Tag = ""
-              ActivePage = "false"
-              ActivateTime = "0"/>
-          </DockingBlock>
-        </DockingNode>
+      <DockingNode DockingDirection = "None">
+        <DockingBlock Width = "1055" Height = "611" DocumentStyle = "true">
+          <DockingCard
+            Text = "NiuNiuHandler.lua"
+            Tag = "E:/Projects/unity/Game/Assets/LuaScripts/Net/Handler/NiuNiuHandler.lua"
+            ActivePage = "false"
+            ActivateTime = "315263695"
+            CaretLineIndex = "4"
+            CaretCodeCharIndex = "39"
+            BaseX = "0"
+            BaseY = "0"/>
+          <DockingCard
+            Text = "NiuNiuView.lua"
+            Tag = "E:/Projects/unity/Game/Assets/LuaScripts/ui/NiuNiuView.lua"
+            ActivePage = "false"
+            ActivateTime = "338925540"
+            CaretLineIndex = "0"
+            CaretCodeCharIndex = "0"
+            BaseX = "0"
+            BaseY = "0"/>
+          <DockingCard
+            Text = "LoginCtrl.lua"
+            Tag = "E:/Projects/unity/Game/Assets/LuaScripts/ui/LoginCtrl.lua"
+            ActivePage = "true"
+            ActivateTime = "639227623"
+            CaretLineIndex = "34"
+            CaretCodeCharIndex = "3"
+            BaseX = "0"
+            BaseY = "-396"/>
+        </DockingBlock>
       </DockingNode>
     </DockingNode>
   </DockingControl>

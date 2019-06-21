@@ -1,9 +1,9 @@
 <CheckedCodeList>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/.lpproj/Apis/BuiltInTypes.lua" ModifyTime = "1554456571448"/>
-  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Common/GameCache.lua.txt" ModifyTime = "1554262429000"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Common/GameCache.lua.txt" ModifyTime = "1555078727409"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/.lpproj/Apis/LuaDebuggee.lua" ModifyTime = "1554456571449"/>
-  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Common/GameManager.lua.txt" ModifyTime = "1554278546000"/>
-  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Common/GamePBLoader.lua.txt" ModifyTime = "1554195292000"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Common/GameManager.lua.txt" ModifyTime = "1555078727409"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Common/GamePBLoader.lua.txt" ModifyTime = "1555078727409"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/.lpproj/Apis/Lua/lua53.lua" ModifyTime = "1554456571448"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/framework/Net/protobuf/containers.lua.txt" ModifyTime = "1552564683000"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/framework/Net/protobuf/descriptor.lua.txt" ModifyTime = "1552564683000"/>
@@ -12,18 +12,18 @@
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/framework/Net/protobuf/listener.lua.txt" ModifyTime = "1552564683000"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/framework/Net/protobuf/text_format.lua.txt" ModifyTime = "1552564683000"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/framework/Net/protobuf/protobuf.lua.txt" ModifyTime = "1552564683000"/>
-  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/main.lua.txt" ModifyTime = "1554281271000"/>
-  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Net/Common/NetDefines.lua.txt" ModifyTime = "1554195482000"/>
-  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Net/Handler/LobbyHandler.lua.txt" ModifyTime = "1554288162000"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/main.lua.txt" ModifyTime = "1555226631629"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Net/Common/NetDefines.lua.txt" ModifyTime = "1555078727409"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Net/Handler/LobbyHandler.lua.txt" ModifyTime = "1555078727410"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/framework/Net/protobuf/type_checkers.lua.txt" ModifyTime = "1552564683000"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Net/Protobuf/acc_pb.lua.txt" ModifyTime = "1554109792000"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/framework/Net/protobuf/wire_format.lua.txt" ModifyTime = "1552564683000"/>
-  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/LobbyCtrl.lua.txt" ModifyTime = "1554288519000"/>
-  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/LobbyView.lua.txt" ModifyTime = "1554288600000"/>
-  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Net/Protobuf/user_pb.lua.txt" ModifyTime = "1554109799000"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/LobbyCtrl.lua.txt" ModifyTime = "1555078727491"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/LobbyView.lua.txt" ModifyTime = "1555078727491"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Net/Protobuf/user_pb.lua.txt" ModifyTime = "1555078727412"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Net/Protobuf/person_pb.lua.txt" ModifyTime = "1554109795000"/>
-  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/LoginCtrl.lua.txt" ModifyTime = "1554287744000"/>
-  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/LoginView.lua.txt" ModifyTime = "1554263101000"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/LoginCtrl.lua.txt" ModifyTime = "1555332794629"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/LoginView.lua.txt" ModifyTime = "1555078727493"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/UnitTest/ProtobufTest.lua.txt" ModifyTime = "1553682973000"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/Common/GameCache.lua" ModifyTime = "1555078727409"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/Common/GamePBLoader.lua" ModifyTime = "1555078727409"/>
@@ -45,7 +45,7 @@
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/LobbyCtrl.lua" ModifyTime = "1555078727491"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/LobbyView.lua" ModifyTime = "1555078727491"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/Net/Protobuf/user_pb.lua" ModifyTime = "1555078727412"/>
-  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/LoginCtrl.lua" ModifyTime = "1555078727492"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/LoginCtrl.lua" ModifyTime = "1555332794629"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/Net/Protobuf/person_pb.lua" ModifyTime = "1554109795000"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/LoginView.lua" ModifyTime = "1555078727493"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/UnitTest/ProtobufTest.lua" ModifyTime = "1553682973000"/>
@@ -56,7 +56,7 @@
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/Scene/0/Resources/acc_pb.lua.txt" ModifyTime = "1553679597000"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/LobbyView2.lua" ModifyTime = "1554519906464"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/DoTest.lua" ModifyTime = "1554520029514"/>
-  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/Net/Handler/NiuNiuHandler.lua" ModifyTime = "1555218873021"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/Net/Handler/NiuNiuHandler.lua" ModifyTime = "1555328710591"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/Net/Protobuf/card_pb.lua" ModifyTime = "1555078727411"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/Net/Protobuf/simpledata_pb.lua" ModifyTime = "1555078727411"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/BaseCtrl.lua" ModifyTime = "1555078727487"/>
@@ -64,7 +64,7 @@
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/JionRoomCtrl.lua" ModifyTime = "1555078727488"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/JionRoomView.lua" ModifyTime = "1555078727489"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/NiuNiuCtrl.lua" ModifyTime = "1555221188834"/>
-  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/NiuNiuView.lua" ModifyTime = "1555227115372"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/NiuNiuView.lua" ModifyTime = "1555328710592"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/UnitTest/CommonTest.lua" ModifyTime = "1555224033674"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/util/util.lua.txt" ModifyTime = "1548996486827"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/LuaScripts/util/util.lua" ModifyTime = "1548996486827"/>
@@ -148,4 +148,17 @@
   <CheckedCodeItem Filename = "E:/Projects/unity/2017/Game/Assets/ABGame/lua/UnitTest/ProtobufTest.lua.txt" ModifyTime = "1553682973000"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/2017/Game/Assets/ABGame/lua/ui/NiuNiuView.lua.txt" ModifyTime = "1555250246470"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/2017/Game/Assets/ABGame/lua/util/util.lua.txt" ModifyTime = "1555243975707"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/StreamingAssets/config.txt" ModifyTime = "1555328710665"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Net/Handler/NiuNiuHandler.lua.txt" ModifyTime = "1555328710591"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Net/Protobuf/card_pb.lua.txt" ModifyTime = "1555078727411"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/Net/Protobuf/simpledata_pb.lua.txt" ModifyTime = "1555078727411"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/BaseCtrl.lua.txt" ModifyTime = "1555078727487"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/BaseView.lua.txt" ModifyTime = "1555078727488"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/JionRoomCtrl.lua.txt" ModifyTime = "1555078727488"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/JionRoomView.lua.txt" ModifyTime = "1555078727489"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/NiuNiuCtrl.lua.txt" ModifyTime = "1555221188834"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/UnitTest/CommonTest.lua.txt" ModifyTime = "1555224033674"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/util/CoroutineRunner.lua.txt" ModifyTime = "1555223989895"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/NiuNiuView.lua.txt" ModifyTime = "1555328710592"/>
+  <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/util/util.lua.txt" ModifyTime = "1548996486827"/>
 </CheckedCodeList>
