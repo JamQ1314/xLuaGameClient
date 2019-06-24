@@ -21,19 +21,14 @@ public class LuaManager :ManagerBase
 
     private static byte[] MyCustomLoader(ref string fileName)
     {
-        if (GApp.Ins.GMode == GameMode.Debug)
-        {
+#if DEV_LOCAL
             fileName = fileName.Replace(".", "/") + ".lua";
             var fullName = Application.dataPath + "/LuaScripts/" + fileName;
-
             return File.ReadAllBytes(fullName);
-        }
-        else
-        {
+#endif
             string luaName = fileName.Substring(fileName.LastIndexOf('.')+ 1);
             TextAsset luaScript = GApp.AssetLoaderMgr.Load<TextAsset>(luaName + ".lua");
             return System.Text.Encoding.UTF8.GetBytes(luaScript.text);
-        }
     }
 
     public LuaEnv GetLuaEnv()
@@ -44,17 +39,14 @@ public class LuaManager :ManagerBase
 
     public void LoadLua(string luaName)
     {
-        if (GApp.Ins.GMode == GameMode.Debug)
-        {
-            //string relativePtah = Application.dataPath + "/ABGame/LuaScripts";
-            luaEnv.DoString(string.Format("require '{0}'", luaName));
-        }
-        else
-        {
-            TextAsset luaScript = GApp.AssetLoaderMgr.Load<TextAsset>(luaName + ".lua");
-            if (luaScript != null)
-                luaEnv.DoString(luaScript.text);
-        }
+#if DEV_LOCAL
+        //string relativePtah = Application.dataPath + "/ABGame/LuaScripts";
+        luaEnv.DoString(string.Format("require '{0}'", luaName));
+        return;
+#endif
+        TextAsset luaScript = GApp.AssetLoaderMgr.Load<TextAsset>(luaName + ".lua");
+        if (luaScript != null)
+            luaEnv.DoString(luaScript.text);
 
     }
 

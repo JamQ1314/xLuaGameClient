@@ -1,3 +1,7 @@
+Socket_ID={
+	Common = 0,
+}
+
 Main_ID = {
 	Lobby = 1,
 	NiuNiu = 2,

@@ -23,8 +23,9 @@ public class AssetLoaderManager : ManagerBase
         manifest = null;
         dictAssets = new Dictionary<string, string>();
         lCacheDenpendences = new List<AssetBundle>();
-
+#if !DEV_LOCAL
         LoadLocalManifest();
+#endif
     }
     /// <summary>
     /// 加载总依赖文件
@@ -87,25 +88,17 @@ public class AssetLoaderManager : ManagerBase
     /// <returns></returns>
     public GameObject LoadAsset(string assetName)
     {
-        if (GApp.Ins.GMode == GameMode.Debug)
-        {
-#if UNITY_EDITOR
+
+#if DEV_LOCAL
             assetName = assetName.Replace(".", "/") +".prefab";
             string fullName = "Assets/ABGame/" + assetName;
             return (GameObject)Instantiate(UnityEditor.AssetDatabase.LoadAssetAtPath<Object>(fullName));
-#else 
-            return null;
-#endif
-        }
-        else
-        {
-            Release();//释放前面的资源
-
+#else
             var tagName = assetName.Substring(assetName.LastIndexOf(".") + 1);
             Object o = Load<Object>(tagName);
             GameObject go = (GameObject)Instantiate(o);
             return go;
-        }
+#endif
     }
 
     /// <summary>

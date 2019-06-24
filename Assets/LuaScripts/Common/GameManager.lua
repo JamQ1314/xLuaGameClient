@@ -20,7 +20,8 @@ function this.OpenLogin()
 end
 
 function this.OpenLobby()
-	CS.GApp.NetMgr:Connect(0,"127.0.0.1",5555)
+	
+	CS.GApp.NetMgr:Connect(Socket_ID.Common,GApp.server_addr,GApp.server_port)
 	
 	local userinfo = userpb.User()
 	userinfo.name = "你好！"

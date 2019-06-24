@@ -10,6 +10,9 @@ Color = CS.UnityEngine.Color;
 Vector3 = CS.UnityEngine.Vector3;
 AudioSource = CS.UnityEngine.AudioSource
 
+
+GApp = CS.GApp.Ins
+
 co_runner = require "util.CoroutineRunner"
 
 require "UnitTest.CommonTest"

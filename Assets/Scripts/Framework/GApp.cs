@@ -3,33 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using XLua;
 
-[LuaCallCSharp]
-public enum GameMode
-{
-    Debug,//开发模式
-    Release //发布模式
-}
+
 
 [LuaCallCSharp]
 public class GApp :MonoBehaviour
 {
-    //    private static GApp ins = null;
-    //
-    //    public static GApp Ins
-    //    {
-    //        get { return FindObjectOfType<GApp>(); }
-    //    }
-
     public static GApp Ins;
-    public GameMode GMode = GameMode.Debug;
-
-    public int GetMode()
-    {
-        return (int) GMode;
-    }
-    /// <summary>
-    /// AssetBundle管理器
-    /// </summary>
+    public string server_addr = "127.0.0.1";
+    public int server_port = 5566;
+   /// <summary>
+   /// AssetBundle管理器
+   /// </summary>
     public static AssetLoaderManager AssetLoaderMgr = null;
     /// <summary>
     /// 网络管理器
@@ -51,9 +35,6 @@ public class GApp :MonoBehaviour
     private void Awake()
     {
         Ins = this;
-#if !UNITY_EDITOR
-        GMode = GameMode.Release;
-#endif
     }
     private void Start()
     {
@@ -67,14 +48,20 @@ public class GApp :MonoBehaviour
             Debug.LogError(" Net Disconnect");
             return;
         }
-        //先更新资源
+
+
+#if DEV_LOCAL
+        Init();
+        Reset();
+#else
         var help = GetComponent<AssetUpdateHelper>();
-        help.Init();
-        help.StartUpdateAssets(delegate
-        {
-            Init();
-            Reset();
-        });
+            help.Init();
+            help.StartUpdateAssets(delegate
+            {
+                Init();
+                Reset();
+            });
+#endif
     }
     public static void Init()
     {
@@ -93,20 +80,5 @@ public class GApp :MonoBehaviour
         UIMgr.Init();
         AudioMgr.Init();
         LuaMgr.Init();
-    }
-
-
-    public static void Test()
-    {
-        print("GApp.Test() ");
-    }
-    public static void Test2(string  k)
-    {
-        print("GApp.Test() :" + k);
-    }
-
-    public void Test3(string k)
-    {
-        print("GApp.Test() :" + k);
     }
 }
