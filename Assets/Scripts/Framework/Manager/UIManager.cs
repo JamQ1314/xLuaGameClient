@@ -24,13 +24,20 @@ public class UIManager : ManagerBase
     {
         string sName = uiName.Substring(uiName.LastIndexOf(".") + 1) +"(Clone)";
         GameObject ui = GetGameObject(sName);
+        LuaViewBehaviour viewBehaviour = null;
         if (ui == null)
         {
             ui = GApp.AssetLoaderMgr.LoadAsset(uiName);
+            //添加脚本
+            viewBehaviour = ui.GetComponent<LuaViewBehaviour>();
+            if (viewBehaviour == null)
+                viewBehaviour = ui.AddComponent<LuaViewBehaviour>();
+            //创建回调
             if (onCreate != null)
                 onCreate();
         }
-        ui.GetComponent<LuaViewBehaviour>().Open();
+        //打开初始化
+        viewBehaviour.Open();
 
         if(!dictOpenedUIs.ContainsKey(ui.name))
             dictOpenedUIs.Add(ui.name, ui);

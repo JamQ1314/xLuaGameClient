@@ -5,6 +5,7 @@ local _M = {}
 _M.ACCOUNT = protobuf.Descriptor();
 _M.ACCOUNT_ACC_FIELD = protobuf.FieldDescriptor();
 _M.ACCOUNT_PWD_FIELD = protobuf.FieldDescriptor();
+_M.ACCOUNT_ICO_FIELD = protobuf.FieldDescriptor();
 
 _M.ACCOUNT_ACC_FIELD.name = "acc"
 _M.ACCOUNT_ACC_FIELD.full_name = ".Account.acc"
@@ -26,11 +27,21 @@ _M.ACCOUNT_PWD_FIELD.default_value = ""
 _M.ACCOUNT_PWD_FIELD.type = 9
 _M.ACCOUNT_PWD_FIELD.cpp_type = 9
 
+_M.ACCOUNT_ICO_FIELD.name = "ico"
+_M.ACCOUNT_ICO_FIELD.full_name = ".Account.ico"
+_M.ACCOUNT_ICO_FIELD.number = 3
+_M.ACCOUNT_ICO_FIELD.index = 2
+_M.ACCOUNT_ICO_FIELD.label = 2
+_M.ACCOUNT_ICO_FIELD.has_default_value = false
+_M.ACCOUNT_ICO_FIELD.default_value = ""
+_M.ACCOUNT_ICO_FIELD.type = 12
+_M.ACCOUNT_ICO_FIELD.cpp_type = 9
+
 _M.ACCOUNT.name = "Account"
 _M.ACCOUNT.full_name = ".Account"
 _M.ACCOUNT.nested_types = {}
 _M.ACCOUNT.enum_types = {}
-_M.ACCOUNT.fields = {_M.ACCOUNT_ACC_FIELD, _M.ACCOUNT_PWD_FIELD}
+_M.ACCOUNT.fields = {_M.ACCOUNT_ACC_FIELD, _M.ACCOUNT_PWD_FIELD, _M.ACCOUNT_ICO_FIELD}
 _M.ACCOUNT.is_extendable = false
 _M.ACCOUNT.extensions = {}
 

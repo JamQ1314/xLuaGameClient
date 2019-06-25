@@ -39,6 +39,7 @@ public class GApp :MonoBehaviour
     private void Start()
     {
         DoUpdate();
+        StartCoroutine(ieWWW());
     }
 
     private void DoUpdate()
@@ -80,5 +81,20 @@ public class GApp :MonoBehaviour
         UIMgr.Init();
         AudioMgr.Init();
         LuaMgr.Init();
+    }
+
+    IEnumerator ieWWW()
+    {
+        WWW w = new WWW("file:///d:/logo.jpg");
+        yield return w;
+        if (w.error != null)
+        {
+            print(w.error);
+            yield break;
+        }
+
+        Texture2D tex = w.texture;
+        var bytes = tex.EncodeToJPG();
+        System.IO.File.WriteAllBytes("D:/EN.PNG", bytes);
     }
 }

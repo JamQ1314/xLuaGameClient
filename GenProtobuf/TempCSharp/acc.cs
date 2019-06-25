@@ -29,6 +29,13 @@ namespace acc
       get { return _pwd; }
       set { _pwd = value; }
     }
+    private byte[] _ico;
+    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"ico", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public byte[] ico
+    {
+      get { return _ico; }
+      set { _ico = value; }
+    }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
