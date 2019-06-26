@@ -13,7 +13,9 @@ Lobby_ID = {
 	WxLogin = 3,
 	VisitorLogin = 4,
 	-- 回调 100 起
-	LoginSuccess = 101
+	LoginSuccess = 101,
+	LoginFaiure = 102,
+	RegisterFailure= 103,
 	
 	}
 NiuNiu_ID = {

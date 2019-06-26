@@ -6,6 +6,7 @@ function LoginCtrl.Init()
 	--打开登录界面
 	require "ui.LoginView"
 	CS.GApp.UIMgr:Open("prefabs.ui.loginview",LoginCtrl.OnCreate);
+	
 end	
 
 
@@ -18,6 +19,7 @@ function LoginCtrl.OnCreate()
 	
 	CS.UIEventListener.Get(LoginView.GetGo("bg/accRegister/btn_reg_close")).onClick = this.openlogin
 	CS.UIEventListener.Get(LoginView.GetGo("bg/accRegister/btn_accapply")).onClick = this.accregister
+	CS.UIEventListener.Get(LoginView.GetGo("bg/accRegister/headIco/btn_edithead")).onClick = this.EditHead
 	--连接服务器
 	LoginCtrl.netConn()
 	
@@ -43,8 +45,33 @@ end
 function this.accregister(go)
 	print("register")
 	local acc ,pwd = LoginView.GetRegisterInfo()
+	if acc==nil or pwd==nil then
+		return
+	end
+	local data = accpb.Account()
+	data.acc = acc
+	data.pwd = pwd
+	data.id = -1
+	data.ico = 0
+	local bytes = data:SerializeToString()
+	CS.GApp.NetMgr:Send(Socket_ID.Common,Main_ID.Lobby,Lobby_ID.AccRegister,bytes)
 end
 
+function this.EditHead(go)
+	print("edithead")
+	CS.MainHelper.EditHead(function (bytes)
+		--LoginView.texBytes = bytes;
+			local data = accpb.Account()
+			data.acc = "acc"
+			data.pwd = "pwd"
+			data.id = -1
+			data.ico = bytes
+			local bytes = data:SerializeToString()
+			print(string.len(bytes))
+			CS.GApp.NetMgr:Send(Socket_ID.Common,Main_ID.Lobby,Lobby_ID.AccRegister,bytes)
+			
+	end)
+end
 
 
 

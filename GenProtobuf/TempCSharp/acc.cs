@@ -15,22 +15,29 @@ namespace acc
   {
     public Account() {}
     
+    private int _id;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int id
+    {
+      get { return _id; }
+      set { _id = value; }
+    }
     private string _acc;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"acc", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"acc", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public string acc
     {
       get { return _acc; }
       set { _acc = value; }
     }
     private string _pwd;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"pwd", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"pwd", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public string pwd
     {
       get { return _pwd; }
       set { _pwd = value; }
     }
     private byte[] _ico;
-    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"ico", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::ProtoBuf.ProtoMember(4, IsRequired = true, Name=@"ico", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public byte[] ico
     {
       get { return _ico; }

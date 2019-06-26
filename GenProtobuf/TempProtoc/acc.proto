@@ -1,5 +1,6 @@
 message Account {
-	required string acc = 1;
-	required string pwd = 2;
-	required bytes ico = 3;
+	required int32 id = 1;
+	required string acc = 2;
+	required string pwd = 3;
+	required bytes ico = 4;
 }

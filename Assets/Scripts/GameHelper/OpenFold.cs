@@ -43,10 +43,9 @@ public class OpenSystemFolder
 
     public static string OpenFile()
     {
-#if DEV_LOCAL
         OpenFileName ofn = new OpenFileName();
         ofn.structSize = Marshal.SizeOf(ofn);
-        ofn.filter = "All Image Files\0*.bmp;*.ico;*.gif;*.jpeg;*.jpg;*.png;*.tif;*.tiff";
+        //ofn.filter = "All Image Files\0*.bmp;*.ico;*.gif;*.jpeg;*.jpg;*.png;*.tif;*.tiff";
         ofn.filter = "Images\0*.png";
         ofn.file = new string(new char[256]);
         ofn.maxFile = ofn.file.Length;
@@ -58,13 +57,12 @@ public class OpenSystemFolder
         ofn.title = "Open Project";
         ofn.defExt = "PNG";//显示文件的类型  
         //注意 一下项目不一定要全选 但是0x00000008项不要缺少  
-        //ofn.flags = 0x00080000 | 0x00001000 | 0x00000800 | 0x00000200 | 0x00000008;//OFN_EXPLORER|OFN_FILEMUSTEXIST|OFN_PATHMUSTEXIST| OFN_ALLOWMULTISELECT|OFN_NOCHANGEDIR  
-        ofn.flags = 0x00080000 | 0x00001000 | 0x00000008;
+        ofn.flags = 0x00080000 | 0x00001000 | 0x00000800 | 0x00000200 | 0x00000008;//OFN_EXPLORER|OFN_FILEMUSTEXIST|OFN_PATHMUSTEXIST| OFN_ALLOWMULTISELECT|OFN_NOCHANGEDIR  
+        //ofn.flags = 0x00080000 | 0x00001000 | 0x00000008;
         if (GetOpenFileName(ofn))
         {
             return ofn.file;
         }
-#endif
         return "";
     }
 }

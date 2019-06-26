@@ -3,14 +3,25 @@ local protobuf = require "Framework.Net.Protobuf.protobuf"
 local _M = {}
 
 _M.ACCOUNT = protobuf.Descriptor();
+_M.ACCOUNT_ID_FIELD = protobuf.FieldDescriptor();
 _M.ACCOUNT_ACC_FIELD = protobuf.FieldDescriptor();
 _M.ACCOUNT_PWD_FIELD = protobuf.FieldDescriptor();
 _M.ACCOUNT_ICO_FIELD = protobuf.FieldDescriptor();
 
+_M.ACCOUNT_ID_FIELD.name = "id"
+_M.ACCOUNT_ID_FIELD.full_name = ".Account.id"
+_M.ACCOUNT_ID_FIELD.number = 1
+_M.ACCOUNT_ID_FIELD.index = 0
+_M.ACCOUNT_ID_FIELD.label = 2
+_M.ACCOUNT_ID_FIELD.has_default_value = false
+_M.ACCOUNT_ID_FIELD.default_value = 0
+_M.ACCOUNT_ID_FIELD.type = 5
+_M.ACCOUNT_ID_FIELD.cpp_type = 1
+
 _M.ACCOUNT_ACC_FIELD.name = "acc"
 _M.ACCOUNT_ACC_FIELD.full_name = ".Account.acc"
-_M.ACCOUNT_ACC_FIELD.number = 1
-_M.ACCOUNT_ACC_FIELD.index = 0
+_M.ACCOUNT_ACC_FIELD.number = 2
+_M.ACCOUNT_ACC_FIELD.index = 1
 _M.ACCOUNT_ACC_FIELD.label = 2
 _M.ACCOUNT_ACC_FIELD.has_default_value = false
 _M.ACCOUNT_ACC_FIELD.default_value = ""
@@ -19,8 +30,8 @@ _M.ACCOUNT_ACC_FIELD.cpp_type = 9
 
 _M.ACCOUNT_PWD_FIELD.name = "pwd"
 _M.ACCOUNT_PWD_FIELD.full_name = ".Account.pwd"
-_M.ACCOUNT_PWD_FIELD.number = 2
-_M.ACCOUNT_PWD_FIELD.index = 1
+_M.ACCOUNT_PWD_FIELD.number = 3
+_M.ACCOUNT_PWD_FIELD.index = 2
 _M.ACCOUNT_PWD_FIELD.label = 2
 _M.ACCOUNT_PWD_FIELD.has_default_value = false
 _M.ACCOUNT_PWD_FIELD.default_value = ""
@@ -29,8 +40,8 @@ _M.ACCOUNT_PWD_FIELD.cpp_type = 9
 
 _M.ACCOUNT_ICO_FIELD.name = "ico"
 _M.ACCOUNT_ICO_FIELD.full_name = ".Account.ico"
-_M.ACCOUNT_ICO_FIELD.number = 3
-_M.ACCOUNT_ICO_FIELD.index = 2
+_M.ACCOUNT_ICO_FIELD.number = 4
+_M.ACCOUNT_ICO_FIELD.index = 3
 _M.ACCOUNT_ICO_FIELD.label = 2
 _M.ACCOUNT_ICO_FIELD.has_default_value = false
 _M.ACCOUNT_ICO_FIELD.default_value = ""
@@ -41,7 +52,7 @@ _M.ACCOUNT.name = "Account"
 _M.ACCOUNT.full_name = ".Account"
 _M.ACCOUNT.nested_types = {}
 _M.ACCOUNT.enum_types = {}
-_M.ACCOUNT.fields = {_M.ACCOUNT_ACC_FIELD, _M.ACCOUNT_PWD_FIELD, _M.ACCOUNT_ICO_FIELD}
+_M.ACCOUNT.fields = {_M.ACCOUNT_ID_FIELD, _M.ACCOUNT_ACC_FIELD, _M.ACCOUNT_PWD_FIELD, _M.ACCOUNT_ICO_FIELD}
 _M.ACCOUNT.is_extendable = false
 _M.ACCOUNT.extensions = {}
 
