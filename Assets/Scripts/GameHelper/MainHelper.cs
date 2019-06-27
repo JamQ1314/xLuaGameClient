@@ -9,7 +9,8 @@ public class MainHelper  {
     public static void EditHead(Action<byte[]> onLoad)
     {
 #if UNITY_EDITOR
-        var path = OpenSystemFolder.OpenFile();
+        //var path = OpenSystemFolder.OpenFile();
+        var path = Application.dataPath + "/Textures/LoginView/head0.png";
         CoroutineRunner co = GameObject.FindObjectOfType<CoroutineRunner>();
         co.StartCoroutine(IeGetHeadIco(path, onLoad));
         

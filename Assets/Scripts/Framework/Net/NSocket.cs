@@ -18,7 +18,10 @@ public class NSocket
 
     private int nRecvSize;//已接接收数据长度
 
-    //private int nHeadSize;
+    //分包发送
+    private byte[] TmpAllSendBuf = null;   //总数据
+    private uint TmpAllSendSize = 0;    //总数据长度
+    private uint TmpHadSendSize = 0;    //已经发送长度
 
 
 
@@ -31,7 +34,7 @@ public class NSocket
 
         nCalls = new Dictionary<int, Action<int, byte[]>>();
 
-        RecvBuffer = new byte[NetDefine.TCP_BUFFER];
+        RecvBuffer = new byte[NetDefine.SOCKET_TCP_BUFFER];
 
         nRecvSize = 0;
 
@@ -72,7 +75,7 @@ public class NSocket
 
     public void RecvAsync()
     {
-        socket.BeginReceive(RecvBuffer, nRecvSize, NetDefine.TCP_BUFFER - nRecvSize, SocketFlags.None, RecvCB, this);
+        socket.BeginReceive(RecvBuffer, nRecvSize, NetDefine.SOCKET_TCP_BUFFER - nRecvSize, SocketFlags.None, RecvCB, this);
     }
 
     void RecvCB(IAsyncResult ar)
@@ -121,7 +124,7 @@ public class NSocket
 
 
         Debug.Log(string.Format("<color=yellow>收到服务器数据长度：{0}   主命令：{1}  子命令：{2} </color>", msgBytes.Length, tcpHead.Cmd.Main_ID, tcpHead.Cmd.Sub_ID));
-        GApp.NetMgr.AddNetMessage(tcpHead.Cmd.Main_ID, tcpHead.Cmd.Sub_ID, buffer);
+        GApp.NetMgr.AddNetMessage((int)tcpHead.Cmd.Main_ID, (int)tcpHead.Cmd.Sub_ID, buffer);
     }
 
 
@@ -132,30 +135,60 @@ public class NSocket
         tcpHead.Cmd.Sub_ID = sub_id;
         int nHeadSize = Marshal.SizeOf(tcpHead);
 
-        int nSendSize = nHeadSize;
+        TmpAllSendSize =(uint)nHeadSize;
         if (data != null)
-            nSendSize += data.Length;
-        tcpHead.Info.Buffer_Size = (ushort)nSendSize;
-
-        byte[] SendBuffer = new byte[nSendSize];
-        var Headbuffer = NetDefine.StruToBytes(tcpHead);
-        Array.Copy(Headbuffer, SendBuffer, nHeadSize);
+            TmpAllSendSize += (uint)data.Length;
+        tcpHead.Info.Buffer_Size = TmpAllSendSize;
+  
+        //生成总数据，包括头
+        TmpAllSendBuf = new byte[TmpAllSendSize];            //数据总长度
+        byte[] headbuf = NetDefine.StruToBytes(tcpHead);    //头部数据
+        Array.Copy(headbuf, TmpAllSendBuf, nHeadSize);         //拷贝头部
         if (data != null)
-            Array.Copy(data, 0, SendBuffer, nHeadSize, data.Length);
+            Array.Copy(data, 0, TmpAllSendBuf, nHeadSize, data.Length);    //拷贝数据
+        Debug.Log(">>>>>>>>>>>>>>>>> 发送总数据长度：" + TmpAllSendSize);
+        //数据发送
+        DoSend(callback, hashtable);
 
-        socket.BeginSend(SendBuffer,0, nSendSize,SocketFlags.None, (ar) =>
+    }
+
+    private void DoSend(Action<Hashtable> callback = null, Hashtable hashtable = null)
+    {
+        //数据发送
+        var nLeftSize = TmpAllSendSize - TmpHadSendSize;
+        if (nLeftSize > 0)
         {
-            try
+            uint nTmpSize = nLeftSize > NetDefine.SOCKET_TCP_BUFFER ? NetDefine.SOCKET_TCP_BUFFER : nLeftSize;
+            byte[] tmpSendBuf = new byte[nTmpSize];
+            Array.Copy(TmpAllSendBuf, TmpHadSendSize, tmpSendBuf, 0, nTmpSize);
+            socket.BeginSend(tmpSendBuf, 0, (int)nTmpSize, SocketFlags.None, (ar) =>
             {
-                socket.EndSend(ar);
-                if (callback != null)
-                    callback(hashtable);
-            }
-            catch (SocketException se)
-            {
-                ReConn(se.ErrorCode);
-            }
-        },socket);
+                try
+                {
+                    socket.EndSend(ar);
+                    TmpHadSendSize += nTmpSize;
+                    Debug.Log(">>>>>>>>>>>>>>>>> 发送数据长度：" + TmpHadSendSize);
+                    if (TmpHadSendSize < TmpAllSendSize)
+                    {
+                        DoSend(callback, hashtable);
+                    }
+                    else
+                    {
+                        //发送完成
+                        TmpAllSendBuf = null;
+                        TmpAllSendSize = 0;
+                        TmpHadSendSize = 0;
+                        if(callback !=null)
+                            callback(hashtable);
+                    }
+                }
+                catch (SocketException se)
+                {
+                    ReConn(se.ErrorCode);
+                }
+            }, socket);
+        }
+
     }
 
     public void ReConn(int eCode)

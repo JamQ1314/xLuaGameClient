@@ -14,13 +14,13 @@ public enum NSocketType
 
 public struct TCP_Info
 {
-    public ushort Buffer_Size;
-    public ushort Check_ID;
+    public uint Buffer_Size;
+    public uint Check_ID;
 }
 public struct TCP_Commend
 {
-    public ushort Main_ID;
-    public ushort Sub_ID;
+    public uint Main_ID;
+    public uint Sub_ID;
 }
 
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode, Pack = 1)]
@@ -33,8 +33,7 @@ public class TCP_Head
 
 public class NetDefine
 {
-    public const int TCP_BUFFER = 1024*4;
-
+    public const int SOCKET_TCP_BUFFER = 4096*3;
 
     public static byte[] StrToBytes(string str)
     {

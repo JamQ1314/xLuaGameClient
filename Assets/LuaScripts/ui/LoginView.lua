@@ -46,6 +46,9 @@ end
 function this.open()
 	
 	this.setmode(1)
+	text_registeracc.text = "xyz"
+	text_registerpwd.text = "xyz"
+	text_registerpwda.text = "xyz"
 end
 
 function this.setmode(mode)
@@ -100,7 +103,7 @@ function this.GetRegisterInfo()
 			end	
 		end
 	end
-	print("不应该到这")
+
 	local pwd0 = text_registerpwd.text
 	local pwd1 = text_registerpwda.text
 	if pwd0 =="" then

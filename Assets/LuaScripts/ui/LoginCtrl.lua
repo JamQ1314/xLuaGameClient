@@ -52,7 +52,7 @@ function this.accregister(go)
 	data.acc = acc
 	data.pwd = pwd
 	data.id = -1
-	data.ico = 0
+	data.ico = "0"
 	local bytes = data:SerializeToString()
 	CS.GApp.NetMgr:Send(Socket_ID.Common,Main_ID.Lobby,Lobby_ID.AccRegister,bytes)
 end
