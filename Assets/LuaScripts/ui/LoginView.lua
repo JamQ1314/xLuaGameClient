@@ -12,7 +12,6 @@ text_registeracc = nil
 text_registerpwd = nil
 text_registerpwda = nil
 
-this.texBytes = nil
 
 function this.awake(go)
     this.transform = go.transform
@@ -45,10 +44,14 @@ end
 
 function this.open()
 	
-	this.setmode(1)
-	text_registeracc.text = "xyz"
-	text_registerpwd.text = "xyz"
-	text_registerpwda.text = "xyz"
+	--this.setmode(1)
+	--text_registeracc.text = "xyz"
+	--text_registerpwd.text = "xyz"
+	--text_registerpwda.text = "xyz
+	this.setmode(0)
+	text_loginacc.text = "admin"
+	text_loginpwd.text = "admin"
+	LoginCtrl.TexBytes = nil;
 end
 
 function this.setmode(mode)
@@ -116,5 +119,9 @@ function this.GetRegisterInfo()
 			return
 		end
 	end	
+	
+	if LoginCtrl.TexBytes == nil then
+		text_registerinfo.text = "请选择头像"
+	end
 	return acc,pwd0
 end

@@ -9,11 +9,10 @@ public class MainHelper  {
     public static void EditHead(Action<byte[]> onLoad)
     {
 #if UNITY_EDITOR
-        //var path = OpenSystemFolder.OpenFile();
-        var path = Application.dataPath + "/Textures/LoginView/head0.png";
+        var path = OpenSystemFolder.OpenFile();
+        //var path = Application.dataPath + "/Textures/LoginView/head0.png";
         CoroutineRunner co = GameObject.FindObjectOfType<CoroutineRunner>();
         co.StartCoroutine(IeGetHeadIco(path, onLoad));
-        
 #elif UNITY_ANDROID
 
 #elif UNITY_IOS
@@ -33,10 +32,6 @@ public class MainHelper  {
         Sprite _sp = Sprite.Create(tex2d, new Rect(0, 0, tex2d.width, tex2d.height), 0.5f * Vector2.one);
         gohead.GetComponent<UnityEngine.UI.Image>().sprite = _sp;
         var texBytes = tex2d.EncodeToPNG();
-        Debug.Log("texBytes : " + texBytes.Length);
-        var strBytes = System.Text.Encoding.Unicode.GetString(texBytes);
-        Debug.Log("strBytes : " + strBytes.Length);
-
         onLoad(texBytes);
     }
 }

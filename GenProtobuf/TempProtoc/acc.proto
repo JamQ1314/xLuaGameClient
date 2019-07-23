@@ -2,5 +2,7 @@ message Account {
 	required int32 id = 1;
 	required string acc = 2;
 	required string pwd = 3;
-	required bytes ico = 4;
+	required string nickname = 4;
+	required int32 roomid = 5;
+	required bytes ico = 6;
 }

@@ -39,7 +39,7 @@ public class GApp :MonoBehaviour
     private void Start()
     {
         DoUpdate();
-        StartCoroutine(ieWWW());
+        //StartCoroutine(ieWWW());
     }
 
     private void DoUpdate()

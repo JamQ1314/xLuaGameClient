@@ -161,4 +161,88 @@
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/util/CoroutineRunner.lua.txt" ModifyTime = "1555223989895"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/ui/NiuNiuView.lua.txt" ModifyTime = "1555328710592"/>
   <CheckedCodeItem Filename = "E:/Projects/unity/Game/Assets/ABGame/lua/util/util.lua.txt" ModifyTime = "1548996486827"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/.lpproj/Apis/BuiltInTypes.lua" ModifyTime = "1561350805424"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/.lpproj/Apis/LuaDebuggee.lua" ModifyTime = "1561350805425"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/Common/GameCache.lua.txt" ModifyTime = "1561350805429"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/Common/GameManager.lua.txt" ModifyTime = "1561350805430"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/Common/GamePBLoader.lua.txt" ModifyTime = "1561350805430"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/framework/Net/protobuf/descriptor.lua.txt" ModifyTime = "1561350805442"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/framework/Net/protobuf/listener.lua.txt" ModifyTime = "1561350805443"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/framework/Net/protobuf/type_checkers.lua.txt" ModifyTime = "1561350805445"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/main.lua.txt" ModifyTime = "1561350805446"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/framework/Net/protobuf/text_format.lua.txt" ModifyTime = "1561350805444"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/framework/Net/protobuf/containers.lua.txt" ModifyTime = "1561350805441"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/Net/Handler/LobbyHandler.lua.txt" ModifyTime = "1561350805433"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/Net/Common/NetDefines.lua.txt" ModifyTime = "1561350805432"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/framework/Net/protobuf/wire_format.lua.txt" ModifyTime = "1561350805445"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/Net/Protobuf/acc_pb.lua.txt" ModifyTime = "1561350805435"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/Net/Protobuf/card_pb.lua.txt" ModifyTime = "1561350805435"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/.lpproj/Apis/Lua/lua53.lua" ModifyTime = "1561350805424"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/Net/Protobuf/simpledata_pb.lua.txt" ModifyTime = "1561350805437"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/Net/Protobuf/person_pb.lua.txt" ModifyTime = "1561350805436"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/ui/BaseCtrl.lua.txt" ModifyTime = "1561350805447"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/Net/Handler/NiuNiuHandler.lua.txt" ModifyTime = "1561350805434"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/framework/Net/protobuf/decoder.lua.txt" ModifyTime = "1561350805441"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/ui/BaseView.lua.txt" ModifyTime = "1561350805447"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/ui/JionRoomView.lua.txt" ModifyTime = "1561350805449"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/ui/LobbyCtrl.lua.txt" ModifyTime = "1561350805449"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/ui/JionRoomCtrl.lua.txt" ModifyTime = "1561350805448"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/ui/LobbyView.lua.txt" ModifyTime = "1561350805450"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/Net/Protobuf/user_pb.lua.txt" ModifyTime = "1561350805437"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/ui/LoginCtrl.lua.txt" ModifyTime = "1561350805450"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/ui/LoginView.lua.txt" ModifyTime = "1561350805451"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/framework/Net/protobuf/encoder.lua.txt" ModifyTime = "1561350805443"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/UnitTest/CommonTest.lua.txt" ModifyTime = "1561350805438"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/util/CoroutineRunner.lua.txt" ModifyTime = "1561350805452"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/ui/NiuNiuCtrl.lua.txt" ModifyTime = "1561350805451"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Common/GameCache.lua" ModifyTime = "1561350805473"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Common/GameManager.lua" ModifyTime = "1561371458286"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Common/GamePBLoader.lua" ModifyTime = "1561447905148"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/UnitTest/ProtobufTest.lua.txt" ModifyTime = "1561350805439"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/framework/Net/protobuf/containers.lua" ModifyTime = "1561350805482"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/framework/Net/protobuf/listener.lua" ModifyTime = "1561350805485"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/framework/Net/protobuf/descriptor.lua" ModifyTime = "1561350805483"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/util/util.lua.txt" ModifyTime = "1561350805452"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/main.lua" ModifyTime = "1561371458288"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/framework/Net/protobuf/text_format.lua" ModifyTime = "1561350805486"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/ui/NiuNiuView.lua.txt" ModifyTime = "1561350805452"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/framework/Net/protobuf/type_checkers.lua" ModifyTime = "1561350805486"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Net/Common/NetDefines.lua" ModifyTime = "1561537715462"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/framework/Net/protobuf/wire_format.lua" ModifyTime = "1561350805487"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Net/Handler/LobbyHandler.lua" ModifyTime = "1561350805476"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Net/Protobuf/acc_pb.lua" ModifyTime = "1561536848843"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/framework/Net/protobuf/decoder.lua" ModifyTime = "1561350805483"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Net/Protobuf/card_pb.lua" ModifyTime = "1561536850733"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/BaseCtrl.lua" ModifyTime = "1561350805488"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Net/Handler/NiuNiuHandler.lua" ModifyTime = "1561350805476"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Net/Protobuf/simpledata_pb.lua" ModifyTime = "1561536852603"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/BaseView.lua" ModifyTime = "1561350805489"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Net/Protobuf/person_pb.lua" ModifyTime = "1561350805478"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/Editor/XLua/Template/TemplateCommon.lua.txt" ModifyTime = "1561350805470"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/ABGame/lua/framework/Net/protobuf/protobuf.lua.txt" ModifyTime = "1561350805444"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/JionRoomView.lua" ModifyTime = "1561350805490"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/LobbyCtrl.lua" ModifyTime = "1561350805490"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/framework/Net/protobuf/encoder.lua" ModifyTime = "1561350805484"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/JionRoomCtrl.lua" ModifyTime = "1561350805489"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/LobbyView.lua" ModifyTime = "1561350805491"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/LoginView.lua" ModifyTime = "1562312088093"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/LoginCtrl.lua" ModifyTime = "1562312112990"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Net/Protobuf/user_pb.lua" ModifyTime = "1561536854464"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/UnitTest/CommonTest.lua" ModifyTime = "1561370387077"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/util/CoroutineRunner.lua" ModifyTime = "1561350805494"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/NiuNiuCtrl.lua" ModifyTime = "1561444751514"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/Scene/0/Resources/TestMain.lua.txt" ModifyTime = "1561350805575"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/Scene/1Delegate/Resources/main1.lua.txt" ModifyTime = "1561350805578"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/StreamingAssets/config.txt" ModifyTime = "1561350805661"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/Scene/0/Resources/acc_pb.lua.txt" ModifyTime = "1561350805576"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/Scene/1Delegate/Resources/Mydel.lua.txt" ModifyTime = "1561350805578"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/UnitTest/ProtobufTest.lua" ModifyTime = "1561350805481"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/NiuNiuView.lua" ModifyTime = "1561350805493"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/util/util.lua" ModifyTime = "1561350805494"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/framework/Net/protobuf/protobuf.lua" ModifyTime = "1561350805485"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Net/Protobuf 1/acc_pb.lua" ModifyTime = "1561435296295"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Net/Protobuf 1/simpledata_pb.lua" ModifyTime = "1561435300031"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Net/Protobuf 1/card_pb.lua" ModifyTime = "1561435298165"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Net/Protobuf 1/user_pb.lua" ModifyTime = "1561435301897"/>
+  <CheckedCodeItem Filename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Common/GameUtils.lua" ModifyTime = "1561531074114"/>
 </CheckedCodeList>

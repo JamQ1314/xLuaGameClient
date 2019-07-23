@@ -2,9 +2,9 @@
 <BreakpointList/>
 <WatchList/>
 <ProjectUI>
-  <TreeState BaseX = "0" BaseY = "-180" AlternativeItem = "LuaFolders#Assets#LuaScripts#ui#LoginView.lua">
+  <TreeState BaseX = "0" BaseY = "0" AlternativeItem = "LuaFolders#Assets#LuaScripts#ui#LobbyView.lua">
     <SelectedList>
-      <Selected Path = "LuaFolders#Assets#LuaScripts#ui#LoginCtrl.lua"/>
+      <Selected Path = "LuaFolders#Assets#LuaScripts#ui#LobbyCtrl.lua"/>
     </SelectedList>
     <ExpandedList>
       <Expanded Path = "LuaFolders"/>
@@ -21,10 +21,10 @@
   </TreeState>
 </ProjectUI>
 <FindAnReplaceUI
-  Pattern = ""
+  Pattern = "co_runner"
   MatchCase = "false"
   MatchWholeWord = "false"
-  Target = ""
+  Target = "<CurrentFile>"
   Replace = ""/>
 <MainWindow
   X = "43"
@@ -32,11 +32,11 @@
   Width = "1280"
   Height = "720"
   Maximized = "true"
-  LastCodeFilename = "E:/Projects/unity/Game/Assets/LuaScripts/ui/LoginCtrl.lua">
+  LastCodeFilename = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/LoginCtrl.lua">
   <DockingControl>
     <DockingNode DockingDirection = "Horizontal">
       <DockingNode DockingDirection = "None">
-        <DockingBlock Width = "292" Height = "611" DocumentStyle = "false">
+        <DockingBlock Width = "358" Height = "903" DocumentStyle = "false">
           <DockingCard
             Text = "Project"
             Tag = ""
@@ -50,34 +50,70 @@
         </DockingBlock>
       </DockingNode>
       <DockingNode DockingDirection = "None">
-        <DockingBlock Width = "1055" Height = "611" DocumentStyle = "true">
+        <DockingBlock Width = "1303" Height = "903" DocumentStyle = "true">
           <DockingCard
-            Text = "NiuNiuHandler.lua"
-            Tag = "E:/Projects/unity/Game/Assets/LuaScripts/Net/Handler/NiuNiuHandler.lua"
-            ActivePage = "false"
-            ActivateTime = "315263695"
-            CaretLineIndex = "4"
-            CaretCodeCharIndex = "39"
+            Text = "LoginCtrl.lua"
+            Tag = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/LoginCtrl.lua"
+            ActivePage = "true"
+            ActivateTime = "536814288"
+            CaretLineIndex = "50"
+            CaretCodeCharIndex = "0"
             BaseX = "0"
-            BaseY = "0"/>
+            BaseY = "-792"/>
           <DockingCard
-            Text = "NiuNiuView.lua"
-            Tag = "E:/Projects/unity/Game/Assets/LuaScripts/ui/NiuNiuView.lua"
+            Text = "LoginView.lua"
+            Tag = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/LoginView.lua"
             ActivePage = "false"
-            ActivateTime = "338925540"
-            CaretLineIndex = "0"
+            ActivateTime = "281459145"
+            CaretLineIndex = "120"
+            CaretCodeCharIndex = "34"
+            BaseX = "0"
+            BaseY = "-1320"/>
+          <DockingCard
+            Text = "GamePBLoader.lua"
+            Tag = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Common/GamePBLoader.lua"
+            ActivePage = "false"
+            ActivateTime = "716213163"
+            CaretLineIndex = "4"
             CaretCodeCharIndex = "0"
             BaseX = "0"
             BaseY = "0"/>
           <DockingCard
-            Text = "LoginCtrl.lua"
-            Tag = "E:/Projects/unity/Game/Assets/LuaScripts/ui/LoginCtrl.lua"
-            ActivePage = "true"
-            ActivateTime = "639227623"
-            CaretLineIndex = "34"
-            CaretCodeCharIndex = "3"
+            Text = "NiuNiuCtrl.lua"
+            Tag = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/NiuNiuCtrl.lua"
+            ActivePage = "false"
+            ActivateTime = "803282033"
+            CaretLineIndex = "70"
+            CaretCodeCharIndex = "20"
             BaseX = "0"
-            BaseY = "-396"/>
+            BaseY = "-990"/>
+          <DockingCard
+            Text = "NiuNiuView.lua"
+            Tag = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/NiuNiuView.lua"
+            ActivePage = "false"
+            ActivateTime = "797014562"
+            CaretLineIndex = "167"
+            CaretCodeCharIndex = "23"
+            BaseX = "0"
+            BaseY = "-275"/>
+          <DockingCard
+            Text = "LobbyCtrl.lua"
+            Tag = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/ui/LobbyCtrl.lua"
+            ActivePage = "false"
+            ActivateTime = "803302092"
+            CaretLineIndex = "0"
+            CaretCodeCharIndex = "0"
+            BaseX = "0"
+            BaseY = "-264"/>
+          <DockingCard
+            Text = "NetDefines.lua"
+            Tag = "E:/Cources/Calc/xLuaGameClient/Assets/LuaScripts/Net/Common/NetDefines.lua"
+            ActivePage = "false"
+            ActivateTime = "872143196"
+            CaretLineIndex = "11"
+            CaretCodeCharIndex = "12"
+            BaseX = "0"
+            BaseY = "0"/>
         </DockingBlock>
       </DockingNode>
     </DockingNode>

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: b1ee10103001a6b409b2015c5660ae01
+timeCreated: 1563868743
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: FZDaHei-B02S
+  fontNames:
+  - FZDaHei-B02S
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -36,8 +36,22 @@ namespace acc
       get { return _pwd; }
       set { _pwd = value; }
     }
+    private string _nickname;
+    [global::ProtoBuf.ProtoMember(4, IsRequired = true, Name=@"nickname", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string nickname
+    {
+      get { return _nickname; }
+      set { _nickname = value; }
+    }
+    private int _roomid;
+    [global::ProtoBuf.ProtoMember(5, IsRequired = true, Name=@"roomid", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int roomid
+    {
+      get { return _roomid; }
+      set { _roomid = value; }
+    }
     private byte[] _ico;
-    [global::ProtoBuf.ProtoMember(4, IsRequired = true, Name=@"ico", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::ProtoBuf.ProtoMember(6, IsRequired = true, Name=@"ico", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public byte[] ico
     {
       get { return _ico; }

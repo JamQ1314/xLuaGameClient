@@ -1,6 +1,6 @@
 LoginCtrl = {}
 local this = LoginCtrl
-
+this.TexBytes = nil
 
 function LoginCtrl.Init()
 	--打开登录界面
@@ -49,10 +49,12 @@ function this.accregister(go)
 		return
 	end
 	local data = accpb.Account()
+	data.nickname = ""
+	data.roomid = -1
 	data.acc = acc
 	data.pwd = pwd
 	data.id = -1
-	data.ico = "0"
+	data.ico = this.TexBytes
 	local bytes = data:SerializeToString()
 	CS.GApp.NetMgr:Send(Socket_ID.Common,Main_ID.Lobby,Lobby_ID.AccRegister,bytes)
 end
@@ -60,16 +62,7 @@ end
 function this.EditHead(go)
 	print("edithead")
 	CS.MainHelper.EditHead(function (bytes)
-		--LoginView.texBytes = bytes;
-			local data = accpb.Account()
-			data.acc = "acc"
-			data.pwd = "pwd"
-			data.id = -1
-			data.ico = bytes
-			local bytes = data:SerializeToString()
-			print(string.len(bytes))
-			CS.GApp.NetMgr:Send(Socket_ID.Common,Main_ID.Lobby,Lobby_ID.AccRegister,bytes)
-			
+			this.TexBytes = bytes;
 	end)
 end
 
